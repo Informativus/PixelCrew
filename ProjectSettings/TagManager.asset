@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - GoldCoin
+  - Spik
+  - Enemy
+  - Interactable
+  - Hero
+  - Weapon
+  - Ground
+  - "\u0421orpse"
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - KillGround
+  - Ground
+  - 
+  - Coins
+  - Helm
+  - Trash
+  - Interactables
+  - Enemy
+  - Hero
+  - Weapons
+  - Items
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: LayerGrass
+    uniqueID: 434610459
+    locked: 0
+  - name: 'LayerBricks '
+    uniqueID: 3720634409
+    locked: 0
+  - name: LayerBarrel
+    uniqueID: 2982794851
+    locked: 0
+  - name: LayerPorlal
+    uniqueID: 1451322153
+    locked: 0
+  - name: AttackParticleLayer
+    uniqueID: 1724349197
+    locked: 0
+  - name: LayerDoors
+    uniqueID: 367299699
+    locked: 0
+  - name: CoinParticalLayer
+    uniqueID: 1122214669
+    locked: 0
+  - name: ItemsLayer
+    uniqueID: 3925667487
+    locked: 0
+  - name: LayerPirate
+    uniqueID: 1471304149
+    locked: 0
+  - name: Ground
+    uniqueID: 4266552753
+    locked: 0
+  - name: Canvas
+    uniqueID: 3493595883
+    locked: 0
