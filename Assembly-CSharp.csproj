@@ -81,6 +81,7 @@
      <Compile Include="Assets/Scripts/Creatures/Creature.cs" />
      <Compile Include="Assets/Scripts/Componets/ColiderBased/EnterColisionComponent.cs" />
      <Compile Include="Assets/UI/MainMenu/MainMenuWindow.cs" />
+     <Compile Include="Assets/Scripts/Componets/LevelManegement/PauseLevel.cs" />
      <Compile Include="Assets/Scripts/Componets/Interactions/interactableComponent.cs" />
      <Compile Include="Assets/Scripts/Untils/Cooldown.cs" />
      <Compile Include="Assets/Scripts/Creatures/Patrolling/Patrol.cs" />

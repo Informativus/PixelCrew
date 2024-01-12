@@ -22,7 +22,7 @@ namespace PixelCrew.UI
 
         public virtual void OnCloseAnimationComplete()
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

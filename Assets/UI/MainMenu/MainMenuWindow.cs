@@ -7,7 +7,7 @@ namespace PixelCrew.UI.MainMenu
     public class MainMenuWindow : AnimatedWindow
     {
         private Action _closeAction;
-
+        
         public void OnStartGame()
         {
             _closeAction = () =>
@@ -16,7 +16,7 @@ namespace PixelCrew.UI.MainMenu
             };
             Close();
         }
-
+        
         public void OnExit()
         {
             _closeAction = () =>
@@ -29,12 +29,12 @@ namespace PixelCrew.UI.MainMenu
             };
             Close();
         }
-
+        
         public override void OnCloseAnimationComplete()
         {
             base.OnCloseAnimationComplete();
             _closeAction?.Invoke();
-            
         }
+
     }
 }
