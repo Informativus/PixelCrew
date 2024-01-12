@@ -7,12 +7,6 @@ namespace PixelCrew.UI.MainMenu
     public class MainMenuWindow : AnimatedWindow
     {
         private Action _closeAction;
-        [SerializeField] private Transform _optionsPosition;
-        
-        //public void OnShowSettings()
-        //{
-        //    _optionsPosition.position = new(0, 0);
-        //}
 
         public void OnStartGame()
         {
