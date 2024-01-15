@@ -8,11 +8,11 @@ namespace PixelCrew.UI
         private Animator _animator;
         private static readonly int Show = Animator.StringToHash("Show");
         private static readonly int Hide = Animator.StringToHash("Hide");
-        private void Start()
+
+        private void OnEnable()
         {
             _animator = GetComponent<Animator>();
-            
-            _animator. SetTrigger(Show);
+            _animator.SetTrigger(Show);
         }
 
         public void Close()
