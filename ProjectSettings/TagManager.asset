@@ -12,6 +12,7 @@ TagManager:
   - Weapon
   - Ground
   - "\u0421orpse"
+  - SfxAudioSource
   layers:
   - Default
   - TransparentFX

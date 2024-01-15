@@ -96,6 +96,13 @@
      <Compile Include="Assets/Scripts/Creatures/Mobs/TotemsShootingAI.cs" />
      <Compile Include="Assets/Scripts/Componets/ColiderBased/EnterTriggerComponent.cs" />
      <Compile Include="Assets/Scripts/Componets/GoBased/SpawnComponent.cs" />
+     <Compile Include="Assets/Scripts/Model/Data/GameSettings.cs" />
+     <Compile Include="Assets/Scripts/Model/Data/Properties/PersistentProperty.cs" />
+     <Compile Include="Assets/Scripts/Model/Data/Properties/PrefsPersistentProperty.cs" />
+     <Compile Include="Assets/Scripts/Model/Data/Properties/FloatPersistentProperty.cs" />
+     <Compile Include="Assets/UI/Widgets/AudioSettingsWidget.cs" />
+     <Compile Include="Assets/Scripts/Componets/Audio/AudioSettingComponent.cs" />
+     <Compile Include="Assets/UI/Widgets/ButtonSound.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Textures/Enemy/Shooter/Sprites/Seashell/Pearl Idle" />
      <Folder Include="Assets/Textures/Enemy/Crabby/08-Hit" />
@@ -316,6 +323,7 @@
      <Folder Include="Assets/Textures/Pirate Ship/Aseprite" />
      <Folder Include="Assets/Textures/Pirate Ship/Sprites/Decorations/Window/Window Light" />
      <Folder Include="Assets/Textures/Enemy/Crabby/10-Dead Ground" />
+     <Folder Include="Assets/Scripts/Model/Data/Properties" />
      <Folder Include="Assets/Textures/textures/TileMaps" />
      <Folder Include="Assets/Textures/textures/Environment/Materials" />
      <Folder Include="Assets/Textures/Enemy/Crabby" />
