@@ -39,5 +39,10 @@ namespace PixelCrew.Componets.Audio
 
             throw new ArgumentException("Undefinde mode");
         }
+
+        private void OnDestroy()
+        {
+            _model.OnChanged -= OnSoundSettingChanged;
+        }
     }
 }
