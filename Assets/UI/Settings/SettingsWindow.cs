@@ -1,10 +1,8 @@
-
-using System;
-using Model.Data;
-using PixelCrew.UI.Widgets;
+using PixelCrew.Model.Data;
+using PixelCrew.Utils.UI.Widgets;
 using UnityEngine;
 
-namespace PixelCrew.UI.Settings
+namespace PixelCrew.Utils.UI.Settings
 {
     public class SettingsWindow : AnimatedWindow
     {

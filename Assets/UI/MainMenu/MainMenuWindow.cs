@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace PixelCrew.UI.MainMenu
+namespace PixelCrew.Utils.UI.MainMenu
 {
     public class MainMenuWindow : AnimatedWindow
     {

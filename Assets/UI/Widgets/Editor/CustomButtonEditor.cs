@@ -3,7 +3,7 @@ using UnityEditor.TerrainTools;
 using UnityEditor.UI;
 using UnityEngine;
 
-namespace PixelCrew.UI.Widgets
+namespace PixelCrew.Utils.UI.Widgets
 { 
     [CustomEditor(typeof(CustomButton), true)]
     [CanEditMultipleObjects]

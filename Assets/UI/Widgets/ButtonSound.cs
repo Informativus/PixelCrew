@@ -2,7 +2,7 @@ using Model.Data;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace PixelCrew.UI.Widgets
+namespace PixelCrew.Utils.UI.Widgets
 {
     public class ButtonSound : MonoBehaviour, IPointerClickHandler
     {

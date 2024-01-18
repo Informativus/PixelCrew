@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace PixelCrew.UI
+namespace PixelCrew.Utils.UI
 {
     public class AnimatedWindow : MonoBehaviour
     {
