@@ -3,7 +3,7 @@ using UnityEngine.Events;
 using System;
 using UnityEngine.Serialization;
 
-namespace PixelCrew.Utils.Components.Health
+namespace PixelCrew.Components.Health
 {
     public class HealthComponent : MonoBehaviour
     {

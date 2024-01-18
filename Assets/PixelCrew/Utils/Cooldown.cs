@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace PixelCrew.Utils.Untils
+namespace PixelCrew.Utils
 {
     [Serializable]
     public class Cooldown : MonoBehaviour

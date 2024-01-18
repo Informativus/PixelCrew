@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PixelCrew.Utils.Components
+namespace PixelCrew.Components
 {
     public class TeleportComponent : MonoBehaviour
     {

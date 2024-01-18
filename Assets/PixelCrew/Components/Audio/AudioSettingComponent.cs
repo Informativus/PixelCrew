@@ -3,7 +3,7 @@ using PixelCrew.Model.Data;
 using Model.Data.Properties;
 using UnityEngine;
 
-namespace PixelCrew.Utils.Componets.Audio
+namespace PixelCrew.Components.Audio
 {
     [RequireComponent(typeof(AudioSource))]
     public class AudioSettingComponent : MonoBehaviour

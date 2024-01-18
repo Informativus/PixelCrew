@@ -3,8 +3,9 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.Events;
 using System.Linq;
+using PixelCrew.Utils;
 
-namespace PixelCrew.Utils
+namespace PixelCrew.Components
 {
     public class CheckOverLap : MonoBehaviour
     {

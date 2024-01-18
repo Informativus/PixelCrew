@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace PixelCrew.Utils.Creatures.Hero
+namespace PixelCrew.Creatures.Hero
 {
     public class HeroInputReader : MonoBehaviour
     {

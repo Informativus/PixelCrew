@@ -1,8 +1,8 @@
-using PixelCrew.Utils.Components.ColiderBased;
-using PixelCrew.Utils.Untils;
+using PixelCrew.Components.ColliderBased;
+using PixelCrew.Utils;
 using UnityEngine;
 
-namespace PixelCrew.Utils.Components.GoBased
+namespace PixelCrew.Components.GoBased
 {
     public class Counter : MonoBehaviour
     {

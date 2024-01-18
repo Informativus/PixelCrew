@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PixelCrew.Utils.Creature.Mobs.Weapons
+namespace PixelCrew.Creature.Mobs.Weapons
 {
     public class Projectile : BaseProjectile
     {

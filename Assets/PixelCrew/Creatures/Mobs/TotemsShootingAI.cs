@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using PixelCrew.Utils.Components.ColiderBased;
+using PixelCrew.Components.ColliderBased;
 using UnityEngine;
 
-namespace PixelCrew.Utils.Creatures.Mobs
+namespace PixelCrew.Creatures.Mobs
 {
     public class TotemsShootingAI : MonoBehaviour
     {

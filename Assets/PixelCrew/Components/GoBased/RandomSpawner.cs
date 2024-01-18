@@ -2,14 +2,13 @@ using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using System;
-using PixelCrew.Utils.Untils;
+using PixelCrew.Utils;
 using UnityEngine.Events;
-
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
-namespace PixelCrew.Utils.Components.GoBased
+namespace PixelCrew.Components.GoBased
 {
     public class RandomSpawner : MonoBehaviour
     {

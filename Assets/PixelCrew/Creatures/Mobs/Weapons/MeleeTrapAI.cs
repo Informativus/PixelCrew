@@ -1,9 +1,9 @@
-using PixelCrew.Utils.Creatures.Mobs;
-using PixelCrew.Utils.Components.ColiderBased;
-using PixelCrew.Utils.Untils;
+using PixelCrew.Components.ColliderBased;
+using PixelCrew.Components;
+using PixelCrew.Utils;
 using UnityEngine;
 
-namespace PixelCrew.Utils.Creatures.Mobs
+namespace PixelCrew.Creatures.Mobs
 {
     public class MeleeTrapAI : MonoBehaviour
     {

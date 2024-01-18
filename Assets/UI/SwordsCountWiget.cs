@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using PixelCrew.Utils.Model.Data;
-using PixelCrew.Utils.Model;
+using PixelCrew.Model;
 
-namespace PixelCrew.Utils.UI
+namespace PixelCrew.UI
 {
     class SwordsCountWiget : MonoBehaviour
     {

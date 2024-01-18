@@ -1,9 +1,10 @@
 using UnityEngine;
-using PixelCrew.Utils.Components.ColiderBased;
-using PixelCrew.Utils.Components.GoBased;
-using PixelCrew.Utils.Componets.Audio;
+using PixelCrew.Components.ColliderBased;
+using PixelCrew.Components.GoBased;
+using PixelCrew.Components.Audio;
+using PixelCrew.Components;
 
-namespace PixelCrew.Utils.Creatures
+namespace PixelCrew.Creatures
 {
     public class Creature : MonoBehaviour
     {

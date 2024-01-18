@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace PixelCrew.Utils.Components.GoBased
+namespace PixelCrew.Components.GoBased
 {
     public class ProbabilityDropComponent : MonoBehaviour
     {

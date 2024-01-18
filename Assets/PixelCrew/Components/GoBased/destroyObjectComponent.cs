@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-namespace PixelCrew.Utils.Components.GoBased
+namespace PixelCrew.Components.GoBased
 {
     public class destroyObjectComponent : MonoBehaviour
     {

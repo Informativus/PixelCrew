@@ -1,10 +1,10 @@
 using System.Collections;
 using UnityEngine;
-using PixelCrew.Utils.Components.ColiderBased;
-using PixelCrew.Utils.Components.GoBased;
-using PixelCrew.Utils.Creatures.Patrolling;
+using PixelCrew.Components.ColliderBased;
+using PixelCrew.Components.GoBased;
+using PixelCrew.Creatures.Patrolling;
 
-namespace PixelCrew.Utils.Creatures.Mobs
+namespace PixelCrew.Creatures.Mobs
 {
     public class MobeAI : MonoBehaviour
     {

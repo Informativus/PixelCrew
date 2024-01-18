@@ -1,9 +1,9 @@
 using System;
-using PixelCrew.Utils.Components.GoBased;
+using PixelCrew.Components.GoBased;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace PixelCrew.Utils.Creatures.Mobs
+namespace PixelCrew.Creatures.Mobs
 {
     public class Shooter : MonoBehaviour
     {

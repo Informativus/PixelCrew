@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PixelCrew.Utils.Utils
+namespace PixelCrew.Utils
 {
     public static class GameObjectExtensions
     {

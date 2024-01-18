@@ -1,7 +1,7 @@
 using UnityEngine;
 using PixelCrew.Utils.Model.Data;
 
-namespace PixelCrew.Utils.Model
+namespace PixelCrew.Model
 {
     public class GameSession : MonoBehaviour
     {

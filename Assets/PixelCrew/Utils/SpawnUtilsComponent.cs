@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PixelCrew.Utils.Untils
+namespace PixelCrew.Utils
 {
     public class SpawnUtils
     {

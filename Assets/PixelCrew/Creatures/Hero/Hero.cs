@@ -1,12 +1,12 @@
-using System;
-using PixelCrew.Utils.Components.Health;
-using PixelCrew.Utils.Model;
-using PixelCrew.Utils.Untils;
+using PixelCrew.Components.Health;
+using PixelCrew.Model;
+using PixelCrew.Utils;
 using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Events;
+using PixelCrew.Components;
 
-namespace PixelCrew.Utils.Creatures.Hero
+namespace PixelCrew.Creatures.Hero
 {
     public class Hero : Creature
     {

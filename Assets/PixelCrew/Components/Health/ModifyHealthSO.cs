@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using PixelCrew.Utils.Model;
+using PixelCrew.Model;
 
-namespace PixelCrew.Utils.Components.Health
+namespace PixelCrew.Components.Health
 {
     
     [CreateAssetMenu(menuName = "Health", fileName = "ModifyHealthDelta")]

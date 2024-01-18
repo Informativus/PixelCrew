@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace CustomUnityEquipment
+namespace PixelCrew.Components.GoBased
 {
     public class StartActionComponent : MonoBehaviour
     {

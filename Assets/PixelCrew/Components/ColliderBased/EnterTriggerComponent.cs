@@ -1,7 +1,7 @@
 using UnityEngine;
-using PixelCrew.Utils.Utils;
+using PixelCrew.Utils;
 
-namespace PixelCrew.Utils.Components.ColiderBased
+namespace PixelCrew.Components.ColliderBased
 {
     public class EnterTriggerComponent : MonoBehaviour
     {

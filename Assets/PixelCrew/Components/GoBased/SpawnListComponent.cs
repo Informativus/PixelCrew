@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace PixelCrew.Utils.Components.GoBased
+namespace PixelCrew.Components.GoBased
 {
     public class SpawnListComponent : MonoBehaviour
     {

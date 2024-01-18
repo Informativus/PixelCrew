@@ -1,42 +1,45 @@
 using PixelCrew.Utils.Model.Data;
-using PixelCrew.Utils.Model;
+using PixelCrew.Model;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class RequiereItemComponent : MonoBehaviour
+namespace PixelCrew.Components.Interactions
 {
-    [SerializeField] private InventoryItemData[] _required;
-    [SerializeField] private bool _removeAfterUse;
-
-    [SerializeField] private UnityEvent _onSuccess;
-    [SerializeField] private UnityEvent _onFail;
-
-    public void Check()
+    public class RequiereItemComponent : MonoBehaviour
     {
-        
-        var session = FindObjectOfType<GameSession>();
-        var areAllRequirementsMet = true;
-        foreach (var item in _required)
-        {
-            var numItems = session.Data.Inventory.Count(item.Id);
-            if (numItems < item.Value) 
-                areAllRequirementsMet = false;
-        }
+        [SerializeField] private InventoryItemData[] _required;
+        [SerializeField] private bool _removeAfterUse;
 
-        if (areAllRequirementsMet) 
+        [SerializeField] private UnityEvent _onSuccess;
+        [SerializeField] private UnityEvent _onFail;
+
+        public void Check()
         {
-            if (_removeAfterUse)
+
+            var session = FindObjectOfType<GameSession>();
+            var areAllRequirementsMet = true;
+            foreach (var item in _required)
             {
-                foreach (var item in _required)
-                    session.Data.Inventory.Remove(item.Id, item.Value);
+                var numItems = session.Data.Inventory.Count(item.Id);
+                if (numItems < item.Value)
+                    areAllRequirementsMet = false;
             }
 
-            _onSuccess.Invoke();
+            if (areAllRequirementsMet)
+            {
+                if (_removeAfterUse)
+                {
+                    foreach (var item in _required)
+                        session.Data.Inventory.Remove(item.Id, item.Value);
+                }
+
+                _onSuccess.Invoke();
+            }
+            else
+            {
+                _onFail?.Invoke();
+            }
         }
-        else
-        {
-            _onFail?.Invoke();
-        }
+
     }
-    
 }

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace PixelCrew.Utils.Components.LevelManegement
+namespace PixelCrew.Components.LevelManegement
 {
     public class ExitLevelComponent : MonoBehaviour
     {

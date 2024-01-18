@@ -1,9 +1,9 @@
-using PixelCrew.Utils.Creature.Mobs.Weapons;
+using PixelCrew.Creature.Mobs.Weapons;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PixelCrew.Utils.Creatures.Mobs
+namespace PixelCrew.Creatures.Mobs
 {
     public class SinusoidalProjectil : BaseProjectile
     {

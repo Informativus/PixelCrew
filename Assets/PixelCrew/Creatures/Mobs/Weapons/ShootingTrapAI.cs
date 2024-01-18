@@ -1,9 +1,9 @@
-using PixelCrew.Utils.Components.ColiderBased;
-using PixelCrew.Utils.Components.GoBased;
-using PixelCrew.Utils.Untils;
+using PixelCrew.Components.ColliderBased;
+using PixelCrew.Components.GoBased;
+using PixelCrew.Utils;
 using UnityEngine;
 
-namespace PixelCrew.Utils.Creatures.Mobs
+namespace PixelCrew.Creatures.Mobs
 {
     public class ShootingTrapAI : MonoBehaviour
     {

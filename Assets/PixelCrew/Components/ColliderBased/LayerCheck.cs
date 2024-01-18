@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PixelCrew.Utils.Components.ColiderBased
+namespace PixelCrew.Components.ColliderBased
 {
     public class LayerCheck : MonoBehaviour
     {
