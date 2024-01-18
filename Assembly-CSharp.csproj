@@ -59,6 +59,7 @@
      <Compile Include="Assets/PixelCrew/Creatures/Mobs/Weapons/ShootingTrapAI.cs" />
      <Compile Include="Assets/PixelCrew/Components/GoBased/ProbabilityDropComponent.cs" />
      <Compile Include="Assets/PixelCrew/Creatures/Patrolling/PointPatrol.cs" />
+     <Compile Include="Assets/PixelCrew/Components/Collectables/CollectorComponent.cs" />
      <Compile Include="Assets/PixelCrew/Components/LevelManegement/ReloadLevelComponent.cs" />
      <Compile Include="Assets/PixelCrew/Components/Interactions/DoInteractionComponent.cs" />
      <Compile Include="Assets/PixelCrew/Components/Movements/VerticalLevitation.cs" />

@@ -4976,6 +4976,7 @@ GameObject:
   - component: {fileID: 6998861572868362894}
   - component: {fileID: 4543047113393730578}
   - component: {fileID: 6998861572868362883}
+  - component: {fileID: 974820920265265983}
   - component: {fileID: 4543047113393730590}
   - component: {fileID: 4543047113393730588}
   - component: {fileID: 4543047113393730591}
@@ -5132,7 +5133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2d1b7d2f8f423db2cc96aca70d982f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 0}
   _sounds:
   - _id: Die
     _clips: {fileID: 8300000, guid: 211dfda75edde43179c8097e07901525, type: 3}
@@ -5264,6 +5264,19 @@ MonoBehaviour:
     Component: {fileID: 4543047114517829131}
   - Id: Throw
     Component: {fileID: 8116507340807297082}
+--- !u!114 &974820920265265983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4543047113393730565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc5356eb03a434a94cf193b524c7ad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _items: []
 --- !u!114 &4543047113393730590
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,4 +1,4 @@
-namespace PixelCrew.Utils.Model.Data
+namespace PixelCrew.Model.Data
 {
     public interface ICanAddInInventory
     {

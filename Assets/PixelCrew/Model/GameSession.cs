@@ -1,5 +1,5 @@
 using UnityEngine;
-using PixelCrew.Utils.Model.Data;
+using PixelCrew.Model.Data;
 
 namespace PixelCrew.Model
 {

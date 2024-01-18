@@ -1,9 +1,8 @@
 using System;
-using PixelCrew.Utils.Model;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace PixelCrew.Utils.Model.Data
+namespace PixelCrew.Model.Data
 {
     
     [Serializable]

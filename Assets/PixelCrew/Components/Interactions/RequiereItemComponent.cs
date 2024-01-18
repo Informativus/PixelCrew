@@ -1,4 +1,4 @@
-using PixelCrew.Utils.Model.Data;
+using PixelCrew.Model.Data;
 using PixelCrew.Model;
 using UnityEngine;
 using UnityEngine.Events;

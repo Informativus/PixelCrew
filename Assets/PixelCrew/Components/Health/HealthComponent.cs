@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-using System;
 using UnityEngine.Serialization;
 
 namespace PixelCrew.Components.Health

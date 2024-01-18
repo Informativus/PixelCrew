@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PixelCrew.Model.Definitions;
 
-namespace PixelCrew.Utils.Model.Data
+namespace PixelCrew.Model.Data
 {
     [Serializable]
     public class InventoryData
