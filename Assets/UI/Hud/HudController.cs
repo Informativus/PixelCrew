@@ -1,7 +1,7 @@
-using PixelCrew.Utils.UI.Widgets;
+using PixelCrew.UI.Widgets;
 using UnityEngine;
 
-namespace PixelCrew.Utils.UI.Hud
+namespace PixelCrew.UI.Hud
 {
     public class HudController : MonoBehaviour
     {

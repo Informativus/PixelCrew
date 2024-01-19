@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace PixelCrew.Utils.UI.Widgets
+namespace PixelCrew.UI.Widgets
 {
     public class ProgressBarWidget : MonoBehaviour
     {

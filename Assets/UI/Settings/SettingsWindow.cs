@@ -1,5 +1,6 @@
 using PixelCrew.Model.Data;
-using PixelCrew.Utils.UI.Widgets;
+using PixelCrew.UI.Widgets;
+using PixelCrew.UI.WindowAnimations;
 using UnityEngine;
 
 namespace PixelCrew.Utils.UI.Settings

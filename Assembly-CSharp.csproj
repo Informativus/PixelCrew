@@ -65,7 +65,7 @@
      <Compile Include="Assets/PixelCrew/Components/Movements/VerticalLevitation.cs" />
      <Compile Include="Assets/PixelCrew/Components/GoBased/SpawnListComponent.cs" />
      <Compile Include="Assets/PixelCrew/Creatures/Mobs/Shooter.cs" />
-     <Compile Include="Assets/UI/SwordsCountWiget.cs" />
+     <Compile Include="Assets/UI/Widgets/SwordsCountWiget.cs" />
      <Compile Include="Assets/UI/Widgets/CustomButton.cs" />
      <Compile Include="Assets/PixelCrew/Components/GoBased/RandomSpawner.cs" />
      <Compile Include="Assets/PixelCrew/Creatures/Mobs/Weapons/BaseProjectile.cs" />
