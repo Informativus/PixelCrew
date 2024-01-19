@@ -18,7 +18,7 @@ namespace PixelCrew.Components.Health
             if (target.CompareTag("Hero"))
             {
                 GameObject sessionGameObject = GameObject.Find("Session");
-                sessionGameObject.GetComponent<GameSession>()._data.Hp += _hpDelta;
+                sessionGameObject.GetComponent<GameSession>()._data.Hp.Value += _hpDelta;
             }
         }
     }

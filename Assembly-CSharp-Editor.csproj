@@ -41,10 +41,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/UI/Widgets/Editor/CustomButtonEditor.cs" />
+     <Compile Include="Assets/PixelCrew/UI/Widgets/Editor/CustomButtonEditor.cs" />
      <Compile Include="Assets/PixelCrew/Model/Definitions/Editor/InventoryIdAttributeDrawer.cs" />
      <Folder Include="Assets/PixelCrew/Model/Definitions/Editor" />
-     <Folder Include="Assets/UI/Widgets/Editor" />
+     <Folder Include="Assets/PixelCrew/UI/Widgets/Editor" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.32f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

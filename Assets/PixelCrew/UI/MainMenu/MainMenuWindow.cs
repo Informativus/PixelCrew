@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using PixelCrew.UI.WindowAnimations;
 
 namespace PixelCrew.UI.MainMenu
 {

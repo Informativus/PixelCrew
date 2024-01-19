@@ -45,7 +45,7 @@
      <Compile Include="Assets/PixelCrew/Components/Health/HealthComponent.cs" />
      <Compile Include="Assets/PixelCrew/Creatures/Mobs/MobeAI.cs" />
      <Compile Include="Assets/PixelCrew/Utils/GameObjectExtentions.cs" />
-     <Compile Include="Assets/UI/WindowAnimations/AnimatedWindow.cs" />
+     <Compile Include="Assets/PixelCrew/UI/AnimatedWindow.cs" />
      <Compile Include="Assets/PixelCrew/Components/CheckOverLap.cs" />
      <Compile Include="Assets/PixelCrew/Animations/SpriteAnimation.cs" />
      <Compile Include="Assets/PixelCrew/Model/Data/InventoryData.cs" />
@@ -65,14 +65,14 @@
      <Compile Include="Assets/PixelCrew/Components/Movements/VerticalLevitation.cs" />
      <Compile Include="Assets/PixelCrew/Components/GoBased/SpawnListComponent.cs" />
      <Compile Include="Assets/PixelCrew/Creatures/Mobs/Shooter.cs" />
-     <Compile Include="Assets/UI/Widgets/SwordsCountWiget.cs" />
-     <Compile Include="Assets/UI/Widgets/CustomButton.cs" />
+     <Compile Include="Assets/PixelCrew/UI/Widgets/SwordsCountWiget.cs" />
+     <Compile Include="Assets/PixelCrew/UI/Widgets/CustomButton.cs" />
      <Compile Include="Assets/PixelCrew/Components/GoBased/RandomSpawner.cs" />
      <Compile Include="Assets/PixelCrew/Creatures/Mobs/Weapons/BaseProjectile.cs" />
      <Compile Include="Assets/PixelCrew/Components/GoBased/destroyObjectComponent.cs" />
      <Compile Include="Assets/PixelCrew/Components/ColliderBased/LayerCheck.cs" />
-     <Compile Include="Assets/UI/Hud/HudController.cs" />
-     <Compile Include="Assets/UI/Settings/SettingsWindow.cs" />
+     <Compile Include="Assets/PixelCrew/UI/Hud/HudController.cs" />
+     <Compile Include="Assets/PixelCrew/UI/Settings/SettingsWindow.cs" />
      <Compile Include="Assets/PixelCrew/Creatures/Hero/Hero.cs" />
      <Compile Include="Assets/PixelCrew/Model/Data/PlayerData.cs" />
      <Compile Include="Assets/PixelCrew/Model/Definitions/DefsFacade.cs" />
@@ -86,9 +86,9 @@
      <Compile Include="Assets/PixelCrew/Creatures/Creature.cs" />
      <Compile Include="Assets/PixelCrew/Components/Audio/AudioSettingComponent.cs" />
      <Compile Include="Assets/PixelCrew/Components/ColliderBased/EnterColisionComponent.cs" />
-     <Compile Include="Assets/UI/MainMenu/MainMenuWindow.cs" />
+     <Compile Include="Assets/PixelCrew/UI/MainMenu/MainMenuWindow.cs" />
      <Compile Include="Assets/PixelCrew/Model/Data/Properties/PrefsPersistentProperty.cs" />
-     <Compile Include="Assets/UI/Widgets/AudioSettingsWidget.cs" />
+     <Compile Include="Assets/PixelCrew/UI/Widgets/AudioSettingsWidget.cs" />
      <Compile Include="Assets/PixelCrew/Components/LevelManegement/PauseLevel.cs" />
      <Compile Include="Assets/PixelCrew/Components/Interactions/interactableComponent.cs" />
      <Compile Include="Assets/PixelCrew/Model/Definitions/PlayerDef.cs" />
@@ -96,9 +96,9 @@
      <Compile Include="Assets/PixelCrew/Creatures/Patrolling/Patrol.cs" />
      <Compile Include="Assets/PixelCrew/Components/Audio/PlaySoundsComponent.cs" />
      <Compile Include="Assets/PixelCrew/Components/Health/ModifyHealthComponent.cs" />
-     <Compile Include="Assets/UI/Widgets/ButtonSound.cs" />
+     <Compile Include="Assets/PixelCrew/UI/Widgets/ButtonSound.cs" />
      <Compile Include="Assets/PixelCrew/Components/Interactions/RequiereItemComponent.cs" />
-     <Compile Include="Assets/UI/Widgets/ProgressBarWidget.cs" />
+     <Compile Include="Assets/PixelCrew/UI/Widgets/ProgressBarWidget.cs" />
      <Compile Include="Assets/PixelCrew/Utils/HandlesUtils.cs" />
      <Compile Include="Assets/PixelCrew/Creatures/Mobs/Weapons/MeleeTrapAI.cs" />
      <Compile Include="Assets/PixelCrew/Components/Interactions/SwitchComponent.cs" />
@@ -108,6 +108,8 @@
      <Compile Include="Assets/PixelCrew/Model/Data/Properties/FloatPersistentProperty.cs" />
      <Compile Include="Assets/PixelCrew/Components/ColliderBased/EnterTriggerComponent.cs" />
      <Compile Include="Assets/PixelCrew/Components/GoBased/SpawnComponent.cs" />
+     <Compile Include="Assets/PixelCrew/Model/Data/Properties/ObservableProperty.cs" />
+     <Compile Include="Assets/PixelCrew/Model/Data/Properties/IntProperty.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Textures/Enemy/Shooter/Sprites/Seashell/Pearl Idle" />
      <Folder Include="Assets/Textures/Enemy/Crabby/08-Hit" />
@@ -140,7 +142,7 @@
      <Folder Include="Assets/Textures/Captain/Captain/02-Run" />
      <Folder Include="Assets/Audio/Clips/ui" />
      <Folder Include="Assets/PixelCrew/Model" />
-     <Folder Include="Assets/UI/WindowAnimations" />
+     <Folder Include="Assets/Prefabs/UI/WindowAnimations" />
      <Folder Include="Assets/Textures/Enemy/Shooter/Sprites/Seashell/Seashell Bite" />
      <Folder Include="Assets/Textures/textures/Wood and Paper UI" />
      <Folder Include="Assets/Textures/Enemy/Shooter/Sprites/Seashell/Pearl Destroyed" />
@@ -159,7 +161,7 @@
      <Folder Include="Assets/PixelCrew/Components/Movements" />
      <Folder Include="Assets/Textures/textures/Front Palm Trees" />
      <Folder Include="Assets/Textures/Captain/Captain Clown Nose with Sword/20-Throw Sword" />
-     <Folder Include="Assets/UI/Settings" />
+     <Folder Include="Assets/PixelCrew/UI/Settings" />
      <Folder Include="Assets/PixelCrew/Components" />
      <Folder Include="Assets/Textures/Enemy/Shooter/Sprites/Totems/Wood Spike" />
      <Folder Include="Assets/PixelCrew/Creatures/Patrolling" />
@@ -198,7 +200,6 @@
      <Folder Include="Assets/Textures/Pirate Ship/Sprites/Decorations/Window/Window" />
      <Folder Include="Assets/Textures/Enemy/Shooter/Sprites/Seashell/Seashell Opening" />
      <Folder Include="Assets/PixelCrew/Creatures/Mobs/Weapons" />
-     <Folder Include="Assets/UI" />
      <Folder Include="Assets/Prefabs/Creatures" />
      <Folder Include="Assets/Textures/Pirate Ship" />
      <Folder Include="Assets/Textures/Captain/Sword Effects/26-Attack 3" />
@@ -243,7 +244,7 @@
      <Folder Include="Assets/Prefabs/Collectables/Potions" />
      <Folder Include="Assets/Textures/Enemy/Shooter/Sprites/Cannon/Cannon Ball Explosion" />
      <Folder Include="Assets/Textures/Enemy/Shooter/Sprites/Cannon/Cannon Fire Effect" />
-     <Folder Include="Assets/UI/Widgets" />
+     <Folder Include="Assets/PixelCrew/UI/Widgets" />
      <Folder Include="Assets/Textures/Captain/Captain/08-Dead Ground" />
      <Folder Include="Assets/Textures/textures/Wood and Paper UI/Sprites/Mobile Buttons/Mobile Buttons Cooldown" />
      <Folder Include="Assets/Textures/Captain/Captain/06-Hit" />
@@ -292,10 +293,10 @@
      <Folder Include="Assets/Prefabs/Collectables/Coins/CoinPrefab" />
      <Folder Include="Assets/Audio/Clips/sfx" />
      <Folder Include="Assets/PixelCrew/Components/Audio" />
-     <Folder Include="Assets/UI/MainMenu" />
+     <Folder Include="Assets/PixelCrew/UI/MainMenu" />
      <Folder Include="Assets/Prefabs/Collectables/Spiks" />
      <Folder Include="Assets/TilePalette/PirateShip" />
-     <Folder Include="Assets/UI/Hud" />
+     <Folder Include="Assets/PixelCrew/UI/Hud" />
      <Folder Include="Assets/Prefabs/Creatures/Enemy/Crabby/Animations/Crubby" />
      <Folder Include="Assets/Textures/textures/Wood and Paper UI/Sprites/Orange Paper" />
      <Folder Include="Assets/Prefabs/Creatures/Enemy/ShoterTraps/LowerShoter" />
@@ -333,7 +334,7 @@
      <Folder Include="Assets/Textures/Captain/Captain/03-Jump" />
      <Folder Include="Assets/Textures/textures/Wood and Paper UI/Sprites/Life Bars/Big Bars" />
      <Folder Include="Assets/Textures/Enemy/Shooter/Sprites/Totems/Wood Spike/Idle" />
-     <Folder Include="Assets/UI/Prefabs" />
+     <Folder Include="Assets/Prefabs/UI/Prefabs" />
      <Folder Include="Assets/PixelCrew/Creatures/Mobs" />
      <Folder Include="Assets/Textures/Enemy/Crabby/07-Attack" />
      <Folder Include="Assets/TilePalette/OutDoors" />
@@ -349,6 +350,7 @@
      <Folder Include="Assets/Textures/textures/Wood and Paper UI/Sprites/Yellow Paper" />
      <Folder Include="Assets/Textures/textures/Wood and Paper UI/Sprites/Mobile Buttons/Mobile Buttons" />
      <Folder Include="Assets/Textures/textures/Wood and Paper UI/Sprites/Green Board" />
+     <Folder Include="Assets/PixelCrew/UI" />
      <Folder Include="Assets/Textures/Enemy/Shooter/Sprites/Cannon/Cannon Hit" />
      <Folder Include="Assets/PixelCrew/Components/Health" />
      <Folder Include="Assets/Prefabs/Creatures/Enemy/ShoterTraps/LowerShoter/Animations" />

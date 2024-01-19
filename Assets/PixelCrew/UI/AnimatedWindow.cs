@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PixelCrew.UI.WindowAnimations
+namespace PixelCrew.UI
 {
     public class AnimatedWindow : MonoBehaviour
     {

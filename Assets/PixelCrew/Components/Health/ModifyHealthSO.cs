@@ -12,8 +12,8 @@ namespace PixelCrew.Components.Health
         public void ApplyHealthDelta(GameObject target)
         {
             GameObject sessionGameObject = GameObject.Find("Session");
-            sessionGameObject.GetComponent<GameSession>()._data.Hp += _hpDelta;
-            Debug.Log($"Всего хп: {sessionGameObject.GetComponent<GameSession>()._data.Hp}");
+            sessionGameObject.GetComponent<GameSession>()._data.Hp.Value += _hpDelta;
+            Debug.Log($"Всего хп: {sessionGameObject.GetComponent<GameSession>()._data.Hp.Value}");
         }
     }
 }
