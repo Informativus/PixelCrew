@@ -10,15 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 9139578283131909422}
   - component: {fileID: 9139578283131909425}
-  - component: {fileID: 7118744340193189635}
   - component: {fileID: 9139578283131909426}
   - component: {fileID: 7761987500144817269}
   - component: {fileID: 9139578283131909427}
   - component: {fileID: 9139578283131909420}
   - component: {fileID: 9139578283131909421}
   - component: {fileID: 7434535414257974695}
-  - component: {fileID: 4911399780201987813}
   - component: {fileID: 2808573356272281295}
+  - component: {fileID: 5760904778638770777}
   m_Layer: 10
   m_Name: Coins_0 (1) 1
   m_TagString: Untagged
@@ -93,102 +92,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!82 &7118744340193189635
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9139578283131909423}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 41c463ace438f426baa0c38031388d6c, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5e17e86ac24a646fc936066645ea783e, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!58 &9139578283131909426
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -282,8 +185,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7118744340193189635}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+      - m_Target: {fileID: 5760904778638770777}
+        m_TargetAssemblyTypeName: PixelCrew.Components.Audio.PlaySfxAudio, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -374,19 +277,6 @@ MonoBehaviour:
   _frequency: 2
   _amplitude: 0.03
   _randomize: 0
---- !u!114 &4911399780201987813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9139578283131909423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4d4b87e983d47259dddc8dd798b2480, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mode: 1
 --- !u!114 &2808573356272281295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,3 +291,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: Coin
   _count: 1
+--- !u!114 &5760904778638770777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9139578283131909423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e538331b803345288d5472e3c4c4f8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: 5e17e86ac24a646fc936066645ea783e, type: 3}

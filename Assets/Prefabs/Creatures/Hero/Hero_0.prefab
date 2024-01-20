@@ -5183,7 +5183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5510e5a8f25aa4f93f04b5b30debed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 10
+  _health: 20
   _onDamage:
     m_PersistentCalls:
       m_Calls:
@@ -5974,7 +5974,7 @@ GameObject:
   - component: {fileID: 7562293946606633305}
   m_Layer: 0
   m_Name: SfxAudio
-  m_TagString: SfxAudioSource
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
