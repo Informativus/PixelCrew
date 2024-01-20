@@ -41,7 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/PixelCrew/Components/Health/ModifyHealthSO.cs" />
+     <Compile Include="Assets/PixelCrew/Components/Health/ModifyHealthSo.cs" />
      <Compile Include="Assets/PixelCrew/Components/Health/HealthComponent.cs" />
      <Compile Include="Assets/PixelCrew/Creatures/Mobs/MobeAI.cs" />
      <Compile Include="Assets/PixelCrew/Utils/GameObjectExtentions.cs" />

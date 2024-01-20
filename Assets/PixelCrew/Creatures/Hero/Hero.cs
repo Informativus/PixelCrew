@@ -5,6 +5,7 @@ using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Events;
 using PixelCrew.Components;
+using PixelCrew.Model.Definitions;
 
 namespace PixelCrew.Creatures.Hero
 {
@@ -170,6 +171,11 @@ namespace PixelCrew.Creatures.Hero
         {
 
             if (_session.Data.Inventory.Count("HealthPotions") == 0) return;
+            if (_session.Data.Hp.Value == DefsFacade.I.Player.MaxHealth)
+            {
+                Debug.Log("Тебе не нужно лечение, здоровье полностью заполнено");
+                return;
+            }
 
             _session.Data.Inventory.Remove("HealthPotions", 1);
             

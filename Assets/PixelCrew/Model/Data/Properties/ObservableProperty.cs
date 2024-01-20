@@ -17,10 +17,10 @@ namespace PixelCrew.Model.Data.Properties
             {
                 var isSame = _value.Equals(value);
                 if(isSame) return;
-
                 var oldValue = _value;
 
-                value = _value;
+                _value = value;
+                OnChanged?.Invoke(_value, oldValue);
             }
         }
     }
