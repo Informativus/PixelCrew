@@ -1,8 +1,8 @@
+using PixelCrew.Utils;
 using UnityEngine;
 
 namespace PixelCrew.Components.GoBased
 {
-
     public class SpawnComponent : MonoBehaviour
     {
         [SerializeField] private Transform _target;
@@ -11,9 +11,16 @@ namespace PixelCrew.Components.GoBased
         [ContextMenu("Spawn")]
         public void Spawn()
         {
-            var instantiate = Instantiate(_prefab, transform.position, Quaternion.identity);
-            instantiate.transform.localScale = _target.lossyScale;
-            instantiate.SetActive(true);
+            var instance = SpawnUtils.Spawn(_prefab, _target.position);
+
+            var scale = _target.lossyScale;
+            instance.transform.localScale = scale;
+            instance.SetActive(true);
+        }
+
+        public void SetPrefab(GameObject prefab)
+        {
+            _prefab = prefab;
         }
     }
 }

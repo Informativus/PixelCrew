@@ -13,7 +13,6 @@ namespace PixelCrew.UI.Hud.QuickInventory
         [SerializeField] private InventoryItemWidget _prefab;
         
         private GameSession _session;
-        private InventoryItemData[] _inventory;
         private List<InventoryItemWidget> _createdItem = new List<InventoryItemWidget>();
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();
@@ -21,27 +20,27 @@ namespace PixelCrew.UI.Hud.QuickInventory
         private void Start()
         {
             _session = FindObjectOfType<GameSession>(); 
-
+            _trash.Retain(_session.QuickInventory.Subscribe(Rebuild));
             Rebuild();
         }
 
         private void Rebuild()
         {
-            _inventory = _session.Data.Inventory.GetAll();
+            var inventory = _session.QuickInventory.Inventory;
 
-            for (var i = _createdItem.Count; i < _inventory.Length; i++)
+            for (var i = _createdItem.Count; i < inventory.Length; i++)
             {
                 var item = Instantiate(_prefab, _container); 
                 _createdItem.Add(item);
             }
 
-            for (int i = 0; i < _inventory.Length; i++)
+            for (int i = 0; i < inventory.Length; i++)
             {
-                _createdItem[i].SetData(_inventory[i],i);
+                _createdItem[i].SetData(inventory[i],i);
                 _createdItem[i].gameObject.SetActive(true);
             }
 
-            for (int i = _inventory.Length; i < _createdItem.Count; i++)
+            for (int i = inventory.Length; i < _createdItem.Count; i++)
             {
                 _createdItem[i].gameObject.SetActive(false);
             }

@@ -5084,7 +5084,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _inventory:
-      _inventory: []
+      _inventory:
+      - Id: HealthPotions
+        Value: 3
+      - Id: Coin
+        Value: 2
+      - Id: Sword
+        Value: 2
     Hp:
       _value: 20
 --- !u!4 &803009125

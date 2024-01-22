@@ -132,10 +132,5 @@ namespace PixelCrew.Creatures
             _attackRange.Check();
         }
 
-        public void OnDoThrow()
-        {
-            Particles.Spawn("Throw");
-        }
-
     }
 }
