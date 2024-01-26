@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 718750354188293816}
   - component: {fileID: 7375311525740091916}
   - component: {fileID: 3409878150478193443}
-  - component: {fileID: 5016712864702088574}
   m_Layer: 17
   m_Name: Potions_8
   m_TagString: Untagged
@@ -232,8 +231,8 @@ MonoBehaviour:
           m_StringArgument: Destroy
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5016712864702088574}
-        m_TargetAssemblyTypeName: PixelCrew.Components.Audio.PlaySfxAudio, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -241,7 +240,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Destroy
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &7375311525740091916
@@ -271,16 +270,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: HealthPotions
   _count: 1
---- !u!114 &5016712864702088574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6982956801937117002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e538331b803345288d5472e3c4c4f8fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioClip: {fileID: 8300000, guid: 1053cf1607a67463cbbfebbb613ce07c, type: 3}

@@ -1722,7 +1722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4265695663937911711, guid: aff627a5e9d7e4f42926d795cc30d02b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.83
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 4265695665503157675, guid: aff627a5e9d7e4f42926d795cc30d02b, type: 3}
       propertyPath: _radius
@@ -2057,7 +2057,7 @@ MonoBehaviour:
     _inventory:
       _inventory: []
     Hp:
-      _value: 20
+      _value: 0
 --- !u!4 &944916158
 Transform:
   m_ObjectHideFlags: 0

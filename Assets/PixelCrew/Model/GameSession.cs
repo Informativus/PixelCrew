@@ -8,8 +8,6 @@ namespace PixelCrew.Model
     {
         [SerializeField] public PlayerData _data;
         public PlayerData Data => _data;
-        private PlayerData _save;
-        public QuickInventoryModel QuickInventory { get; private set; }
 
         private void Awake()
         {
@@ -20,15 +18,8 @@ namespace PixelCrew.Model
             }
             else 
             {
-                Save();
-                InitModels();
                 DontDestroyOnLoad(this);
             }
-        }
-
-        private void InitModels()
-        {
-            QuickInventory = new QuickInventoryModel(Data);
         }
 
         private void LoadHud()
@@ -45,15 +36,6 @@ namespace PixelCrew.Model
                     return true;
             }
             return false;
-        }
-        
-        public void Save()
-        {
-            _save = _data.Clone();
-        }
-        public void LoadLastSave()
-        {
-            _data = _save.Clone();
         }
     }
 

@@ -110,14 +110,6 @@
      <Compile Include="Assets/PixelCrew/Components/GoBased/SpawnComponent.cs" />
      <Compile Include="Assets/PixelCrew/Model/Data/Properties/ObservableProperty.cs" />
      <Compile Include="Assets/PixelCrew/Model/Data/Properties/IntProperty.cs" />
-     <Compile Include="Assets/PixelCrew/UI/Hud/QuickInventory/QuickInventoryController.cs" />
-     <Compile Include="Assets/PixelCrew/Utils/Disposables/ActionDisposable.cs" />
-     <Compile Include="Assets/PixelCrew/Utils/Disposables/CompositeDisposable.cs" />
-     <Compile Include="Assets/PixelCrew/Utils/Disposables/UnityEventExtensions.cs" />
-     <Compile Include="Assets/PixelCrew/Utils/AudioUtils.cs" />
-     <Compile Include="Assets/PixelCrew/Components/Audio/PlaySfxAudio.cs" />
-     <Compile Include="Assets/PixelCrew/UI/Hud/QuickInventory/InventoryItemWidget.cs" />
-     <Compile Include="Assets/PixelCrew/Model/Data/QuickInventoryModel.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Textures/Enemy/Shooter/Sprites/Seashell/Pearl Idle" />
      <Folder Include="Assets/Textures/Enemy/Crabby/08-Hit" />
@@ -198,7 +190,6 @@
      <Folder Include="Assets/Textures/Collectables/Chest Key/Idle" />
      <Folder Include="Assets/Textures/textures/Wood and Paper UI/Sprites/Prefabs" />
      <Folder Include="Assets/Prefabs/Creatures/Enemy/Seashell" />
-     <Folder Include="Assets/PixelCrew/Utils/Disposables" />
      <Folder Include="Assets/Prefabs/Collectables/Coins/BaseCoins" />
      <Folder Include="Assets/Textures/Props/Sword" />
      <Folder Include="Assets/Textures/textures/Wood and Paper UI/Sprites/Small Text/White Bar" />
@@ -242,10 +233,8 @@
      <Folder Include="Assets/Prefabs/Creatures/Enemy/ShoterTraps/LowerShoter/Trash" />
      <Folder Include="Assets/Audio/Clips/MySounds/SelectionKeySounds" />
      <Folder Include="Assets/Textures/textures/Wood and Paper UI/Sprites/Big Banner" />
-     <Folder Include="Assets/PixelCrew/UI/Hud/QuickInventory" />
      <Folder Include="Assets/Textures" />
      <Folder Include="Assets/Audio/Clips" />
-     <Folder Include="Assets/Textures/UI/Inventory" />
      <Folder Include="Assets/Textures/textures/Chars" />
      <Folder Include="Assets/PixelCrew/Model/Definitions" />
      <Folder Include="Assets/PixelCrew" />
