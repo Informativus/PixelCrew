@@ -1,52 +1,35 @@
-using System;
 using PixelCrew.Model.Data.Properties;
-using PixelCrew.Model.Definitions;
-using PixelCrew.Utils.Disposables;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace PixelCrew.Model.Data
 {
-    public class QuickInventoryModel
+    public class QuickInventoryModel 
     {
         private readonly PlayerData _data;
 
-        public InventoryItemData[] Inventory { get; private set; }
-
         public readonly IntProperty SelectedIndex = new IntProperty();
-
-        public event Action OnChanged;
-
-        public InventoryItemData SelectedItem => Inventory[SelectedIndex.Value];
+        public InventoryItemData[] Inventory { get; private set; }
 
         public QuickInventoryModel(PlayerData data)
         {
             _data = data;
 
-            Inventory = _data.Inventory.GetAll(ItemTag.Usable);
-            _data.Inventory.OnChanged += OnChangedInventory;
+            Inventory = _data.Inventory.GetAll();
+            _data.Inventory.OnChanged += OnChanged;
         }
 
-        public IDisposable Subscribe(Action call)
+        private void OnChanged(string id, int value)
         {
-            OnChanged += call;
-            return new ActionDisposable(() => OnChanged -= call);
+            Inventory = _data.Inventory.GetAll();
+            SelectedIndex.Value = Mathf.Clamp(SelectedIndex.Value, 0, Inventory.Length - 1);
         }
 
-        private void OnChangedInventory(string id, int value)
+        private void OnDestroy()
         {
-            var indexFound = Array.FindIndex(Inventory, x => x.Id == id);
-            if (indexFound != -1)
-            {
-                Inventory = _data.Inventory.GetAll(ItemTag.Usable);
-                SelectedIndex.Value = Mathf.Clamp(SelectedIndex.Value, 0, Inventory.Length - 1);
-                OnChanged?.Invoke();
-            }
-        }
-
-        public void SetNextItem()
-        {
-            SelectedIndex.Value = (int) Mathf.Repeat(SelectedIndex.Value + 1, Inventory.Length);
+            _data.Inventory.OnChanged -= OnChanged;
         }
     }
-}
+
     
+}

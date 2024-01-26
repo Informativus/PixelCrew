@@ -5093,7 +5093,6 @@ MonoBehaviour:
   _attackCooldown: {fileID: 4279245872235927235}
   _armed: {fileID: 9100000, guid: e3364bf06b9626942b35d39ea4d9d05e, type: 2}
   _disarmed: {fileID: 9100000, guid: 88f3ddfe958c52f46b99c8a76aaa25bc, type: 2}
-  _throwSpawner: {fileID: 8116507340807297082}
   _OnHeal:
     m_PersistentCalls:
       m_Calls:
@@ -5323,6 +5322,22 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4543047113393730584}
         m_TargetAssemblyTypeName: PixelCrew.HeroInputReader, Assembly-CSharp
+        m_MethodName: OnSaySomthing
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a45e7235-90c8-4ec3-9213-2f5c21c1e388
+    m_ActionName: Hero/OnSaySomthing[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4543047113393730584}
+        m_TargetAssemblyTypeName: PixelCrew.HeroInputReader, Assembly-CSharp
         m_MethodName: OnInteraction
         m_Mode: 0
         m_Arguments:
@@ -5387,7 +5402,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4543047113393730584}
         m_TargetAssemblyTypeName: PixelCrew.Creatures.Hero.HeroInputReader, Assembly-CSharp
-        m_MethodName: OnNextItem
+        m_MethodName: OnTreatment
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5724,7 +5739,7 @@ GameObject:
   - component: {fileID: 740004025794719167}
   - component: {fileID: 8116507340807297082}
   m_Layer: 15
-  m_Name: ThrowSpawnPosition
+  m_Name: ThrowSwordSpawnPosition
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
