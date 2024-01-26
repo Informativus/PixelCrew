@@ -108,7 +108,6 @@ namespace PixelCrew.Creatures.Mobs
             }
 
             StartState(GoToHero()); 
-            
         }
 
         private void SetDirectionToTarget()
@@ -125,9 +124,6 @@ namespace PixelCrew.Creatures.Mobs
             return direction.normalized;
         }
 
-
-
-
         public void StartState(IEnumerator coroutine)
         {
 
@@ -136,9 +132,6 @@ namespace PixelCrew.Creatures.Mobs
                 StopCoroutine(_current);
 
             _current = StartCoroutine(coroutine);
-
         }
-
-
     }
 }
