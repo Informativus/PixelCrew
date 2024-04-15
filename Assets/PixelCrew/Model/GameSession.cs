@@ -8,6 +8,8 @@ namespace PixelCrew.Model
     {
         [SerializeField] public PlayerData _data;
         public PlayerData Data => _data;
+        
+        public HudIndentoryModel IndentoryModel { get; private set; }
 
         private void Awake()
         {
@@ -16,10 +18,16 @@ namespace PixelCrew.Model
             {
                 Destroy(gameObject);
             }
-            else 
+            else
             {
+                InitModels();
                 DontDestroyOnLoad(this);
             }
+        }
+
+        private void InitModels()
+        {
+            IndentoryModel = new HudIndentoryModel(Data);
         }
 
         private void LoadHud()

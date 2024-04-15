@@ -1,9 +1,7 @@
-using System;
 using PixelCrew.Model;
 using PixelCrew.Model.Definitions;
 using PixelCrew.UI.Widgets;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace PixelCrew.UI.Hud
 {
