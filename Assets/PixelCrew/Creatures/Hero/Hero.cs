@@ -28,11 +28,10 @@ namespace PixelCrew.Creatures.Hero
 
         [SerializeField] private SpawnComponent _throwSpawner;
 
-        [SerializeField] private ModifyHealthComponent _modifyHealth;
+        [SerializeField] private TreatmentComponent _treatmentComponent;
 
         private const string SwordId = "Sword";
         private const string CoinId = "Coin";
-        private const string HealthPotionsId = "HealthPotions";
         
         private int SwordCount => _session.Data.Inventory.Count(SwordId);
         private int CoinsCount => _session.Data.Inventory.Count(CoinId);
@@ -46,11 +45,10 @@ namespace PixelCrew.Creatures.Hero
         {
             get
             {
-                var selectedId = _session.IndentoryModel.SelectedItem.Id;
-                if (selectedId == SwordId )
+                if (_session.IndentoryModel.SelectedItem.Id == SwordId )
                     return SwordCount > 1;
 
-                var def = DefsFacade.I.Items.Get(selectedId);
+                var def = DefsFacade.I.Items.Get(_session.IndentoryModel.SelectedItem.Id);
 
                 return def.HasTag(ItemTag.Throwable);
             }
@@ -192,18 +190,7 @@ namespace PixelCrew.Creatures.Hero
 
         public void Treatment()
         {
-            if (_session.Data.Inventory.Count(HealthPotionsId) <= 0) return;
-            if (_session.Data.Hp.Value == DefsFacade.I.Player.MaxHealth)
-            {
-                Debug.Log("Тебе не нужно лечение, здоровье полностью заполнено");
-                return;
-            }
-
-            _session.Data.Inventory.Remove("HealthPotions", 1);
-            
-            Sounds.Play("Treatment");
-
-            _modifyHealth.ApplyHealthDelta(gameObject);
+            _treatmentComponent.ModifyHealth(gameObject, Sounds);
         }
 
         public void NextItem()

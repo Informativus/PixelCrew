@@ -28,5 +28,10 @@ namespace PixelCrew.Components.Health
                 sessionGameObject._data.Hp.Value += _hpDelta;
             }
         }
+
+        public void SetHealthDelta(int healthDelta)
+        {
+            _hpDelta = healthDelta;
+        }
     }
 }

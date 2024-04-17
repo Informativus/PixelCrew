@@ -11,13 +11,8 @@ namespace PixelCrew.Model.Definitions
 
         public PotionDef Get(string id)
         {
-            foreach (var itemDef in _items)
-            {
-                if (itemDef.Id == id)
-                    return itemDef;
-            }
-
-            return default;
+            var item = _items.FirstOrDefault(itemDef => itemDef.Id == id);
+            return item;
         }
     }
 
