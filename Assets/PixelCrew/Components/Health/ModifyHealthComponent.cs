@@ -1,4 +1,6 @@
 using PixelCrew.Model;
+using PixelCrew.Model.Definitions;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace PixelCrew.Components.Health
@@ -17,8 +19,13 @@ namespace PixelCrew.Components.Health
 
             if (target.CompareTag("Hero"))
             {
-                GameObject sessionGameObject = GameObject.Find("Session");
-                sessionGameObject.GetComponent<GameSession>()._data.Hp.Value += _hpDelta;
+                var sessionGameObject = GameObject.Find("Session").GetComponent<GameSession>();
+                if (sessionGameObject._data.Hp.Value + _hpDelta >= DefsFacade.I.Player.MaxHealth)
+                {
+                    sessionGameObject._data.Hp.Value = DefsFacade.I.Player.MaxHealth;
+                    return;
+                }
+                sessionGameObject._data.Hp.Value += _hpDelta;
             }
         }
     }

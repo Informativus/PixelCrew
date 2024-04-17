@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PixelCrew.Creature.Mobs.Weapons
+namespace PixelCrew.Creatures.Mobs.Weapons
 {
     public class Projectile : BaseProjectile
     {
@@ -10,12 +10,5 @@ namespace PixelCrew.Creature.Mobs.Weapons
             var force = new Vector2(Direction * FlySpeed, 0);
             Rigidbody.AddForce(force, ForceMode2D.Impulse);
         }
-
-        //private void FixedUpdate()
-        //{   
-        //    var position = Rigidbody.position;
-        //    position.x += Direction * FlySpeed;
-        //    Rigidbody.MovePosition(position);
-        //}
     }
 }

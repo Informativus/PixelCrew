@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 146807166936657393}
   - component: {fileID: 5817849119147784852}
   - component: {fileID: 718750354188293816}
-  - component: {fileID: 7375311525740091916}
   - component: {fileID: 3409878150478193443}
   m_Layer: 17
   m_Name: Potions_8
@@ -231,31 +230,6 @@ MonoBehaviour:
           m_StringArgument: Destroy
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &7375311525740091916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6982956801937117002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ab6b3bdb4db49c4ea364200fa117cb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hpDelta: 2
 --- !u!114 &3409878150478193443
 MonoBehaviour:
   m_ObjectHideFlags: 0

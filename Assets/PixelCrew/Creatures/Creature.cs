@@ -8,15 +8,13 @@ namespace PixelCrew.Creatures
 {
     public class Creature : MonoBehaviour
     {
-        [Header("Params")]
-        [SerializeField] protected bool InvertScale;
+        [Header("Params")] [SerializeField] protected bool InvertScale;
         [SerializeField] private float _speed;
         [SerializeField] protected float JumpSpeed;
         [SerializeField] private float _damageJumpSpeed;
         [SerializeField] private float _scaleGo;
 
-        [Header("Checkers")]
-        [SerializeField] protected LayerCheck GroundCheck;
+        [Header("Checkers")] [SerializeField] protected LayerCheck GroundCheck;
         [SerializeField] protected SpawnListComponent Particles;
         [SerializeField] private CheckOverLap _attackRange;
 
@@ -25,7 +23,7 @@ namespace PixelCrew.Creatures
         protected Animator Animator;
         protected PlaySoundsComponent Sounds;
         protected bool IsGrounded;
-        protected bool IsJumping;  
+        protected bool IsJumping;
 
         private static readonly int IsGroundKey = Animator.StringToHash("is-ground");
         private static readonly int IsRunning = Animator.StringToHash("is-runing");
@@ -49,6 +47,7 @@ namespace PixelCrew.Creatures
         {
             Direction = direction;
         }
+
         private void FixedUpdate()
         {
             var xVelocity = Direction.x * _speed;
@@ -72,11 +71,12 @@ namespace PixelCrew.Creatures
             {
                 IsJumping = false;
             }
+
             if (IsJumpPressing)
             {
                 IsJumping = true;
                 var isFalling = Rigidbody.velocity.y <= 0.01f;
-  
+
                 yVelocity = isFalling ? CalculateJumpVelocity(yVelocity) : yVelocity;
             }
             else if (Rigidbody.velocity.y > 0)
@@ -123,19 +123,17 @@ namespace PixelCrew.Creatures
         }
 
         public virtual void Attack()
-        {         
+        {
             Animator.SetTrigger(AttackKey);
             Sounds.Play("Melee");
         }
+
         public void OnDoAttack()
         {
             _attackRange.Check();
         }
 
-        public void OnDoThrow()
-        {
-            Particles.Spawn("Throw");
-        }
-
     }
 }
+    
+

@@ -6,6 +6,7 @@ namespace PixelCrew.Creatures.Hero
     public class HeroInputReader : MonoBehaviour
     {
         [SerializeField] private Hero _hero;
+
         public void OnHorizontalMovement(InputAction.CallbackContext context)
         {
             var direction = context.ReadValue<Vector2>();
@@ -19,6 +20,7 @@ namespace PixelCrew.Creatures.Hero
                 _hero.Interact();
             }
         }
+
         public void OnLunge(InputAction.CallbackContext context)
         {
             if (context.performed)
@@ -34,13 +36,15 @@ namespace PixelCrew.Creatures.Hero
                 _hero.Attack();
             }
         }
+
         public void OnThrow(InputAction.CallbackContext context)
         {
             if (context.performed)
             {
-                _hero.Throw();
+                _hero.ThrowAndRemoveFromInventory();
             }
         }
+
         public void OnTreatment(InputAction.CallbackContext context)
         {
             if (context.performed)
@@ -49,6 +53,12 @@ namespace PixelCrew.Creatures.Hero
             }
         }
 
-
+        public void OnNextItem(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                _hero.NextItem();
+            }
+        }
     }
 }

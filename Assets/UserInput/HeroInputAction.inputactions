@@ -15,15 +15,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "OnSaySomthing",
-                    "type": "Button",
-                    "id": "a45e7235-90c8-4ec3-9213-2f5c21c1e388",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Interact",
                     "type": "Button",
                     "id": "52d5c7de-7076-427d-bf14-5abcecf17071",
@@ -63,6 +54,15 @@
                     "name": "Treatment",
                     "type": "Button",
                     "id": "67c924b9-2b12-4a03-b37b-8e5233db4535",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "NextItem",
+                    "type": "Button",
+                    "id": "614833ae-5f7c-4940-a776-5b956e3a9f39",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -127,17 +127,6 @@
                 },
                 {
                     "name": "",
-                    "id": "1b6fad3d-44a1-4fa9-b9d3-8efc5d44c4fd",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "OnSaySomthing",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "8011a363-b2c0-42cf-82e7-37c6893cb463",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -188,6 +177,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Treatment",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "96854957-bdb0-4137-b2de-2be028fedcf0",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextItem",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -5076,10 +5076,12 @@ MonoBehaviour:
   _data:
     _inventory:
       _inventory:
-      - Id: Coin
-        Value: 2
       - Id: Sword
-        Value: 3
+        Value: 4
+      - Id: Pearl
+        Value: 31
+      - Id: Spike
+        Value: 20
     Hp:
       _value: 20
 --- !u!4 &803009125
@@ -7073,10 +7075,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero_0
       objectReference: {fileID: 0}
-    - target: {fileID: 4543047113393730578, guid: a45fe21128117ee42b93ad2c412e6b7d, type: 3}
-      propertyPath: _health
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 4543047113393730586, guid: a45fe21128117ee42b93ad2c412e6b7d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -7120,10 +7118,6 @@ PrefabInstance:
     - target: {fileID: 4543047113393730586, guid: a45fe21128117ee42b93ad2c412e6b7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096260090137441182, guid: a45fe21128117ee42b93ad2c412e6b7d, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a45fe21128117ee42b93ad2c412e6b7d, type: 3}
@@ -10166,7 +10160,7 @@ PrefabInstance:
     - target: {fileID: 718750354188293816, guid: cf349e37b33b6ce4c809a74136bd57e1, type: 3}
       propertyPath: _actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4857854141587205051}
+      objectReference: {fileID: 4857854141587205055}
     - target: {fileID: 718750354188293816, guid: cf349e37b33b6ce4c809a74136bd57e1, type: 3}
       propertyPath: _actions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -10225,7 +10219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3409878150478193443, guid: cf349e37b33b6ce4c809a74136bd57e1, type: 3}
       propertyPath: _count
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4198194241940242150, guid: cf349e37b33b6ce4c809a74136bd57e1, type: 3}
       propertyPath: m_RootOrder
@@ -10310,7 +10304,7 @@ CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 51440231100100351, guid: cf349e37b33b6ce4c809a74136bd57e1, type: 3}
   m_PrefabInstance: {fileID: 4857854141587205041}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4857854141587205051 stripped
+--- !u!114 &4857854141587205055 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3409878150478193443, guid: cf349e37b33b6ce4c809a74136bd57e1, type: 3}
   m_PrefabInstance: {fileID: 4857854141587205041}

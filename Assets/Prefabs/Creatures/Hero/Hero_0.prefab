@@ -4981,6 +4981,7 @@ GameObject:
   - component: {fileID: 4543047113393730588}
   - component: {fileID: 4543047113393730591}
   - component: {fileID: 4543047113393730589}
+  - component: {fileID: 6682823062502239941}
   m_Layer: 15
   m_Name: Hero_0
   m_TagString: Hero
@@ -5093,34 +5094,8 @@ MonoBehaviour:
   _attackCooldown: {fileID: 4279245872235927235}
   _armed: {fileID: 9100000, guid: e3364bf06b9626942b35d39ea4d9d05e, type: 2}
   _disarmed: {fileID: 9100000, guid: 88f3ddfe958c52f46b99c8a76aaa25bc, type: 2}
-  _OnHeal:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: faf2eb003c1ea47b9a7962aea9d9dcc8, type: 2}
-        m_TargetAssemblyTypeName: PixelCrew.Components.Health.ModifyHealthSO, Assembly-CSharp
-        m_MethodName: ApplyHealthDelta
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 4543047113393730565}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2443124648986281771}
-        m_TargetAssemblyTypeName: PixelCrew.Componets.Audio.PlaySoundsComponent,
-          Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Treatment
-          m_BoolArgument: 0
-        m_CallState: 2
+  _throwSpawner: {fileID: 8116507340807297082}
+  _modifyHealth: {fileID: 6682823062502239941}
 --- !u!114 &2443124648986281771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5183,7 +5158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5510e5a8f25aa4f93f04b5b30debed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 10
+  _health: 20
   _onDamage:
     m_PersistentCalls:
       m_Calls:
@@ -5322,22 +5297,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4543047113393730584}
         m_TargetAssemblyTypeName: PixelCrew.HeroInputReader, Assembly-CSharp
-        m_MethodName: OnSaySomthing
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: a45e7235-90c8-4ec3-9213-2f5c21c1e388
-    m_ActionName: Hero/OnSaySomthing[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4543047113393730584}
-        m_TargetAssemblyTypeName: PixelCrew.HeroInputReader, Assembly-CSharp
         m_MethodName: OnInteraction
         m_Mode: 0
         m_Arguments:
@@ -5414,6 +5373,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 67c924b9-2b12-4a03-b37b-8e5233db4535
     m_ActionName: Hero/Treatment[/Keyboard/h]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4543047113393730584}
+        m_TargetAssemblyTypeName: PixelCrew.Creatures.Hero.HeroInputReader, Assembly-CSharp
+        m_MethodName: OnNextItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 614833ae-5f7c-4940-a776-5b956e3a9f39
+    m_ActionName: Hero/NextItem[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Hero
@@ -5477,6 +5452,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6682823062502239941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4543047113393730565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ab6b3bdb4db49c4ea364200fa117cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hpDelta: 6
 --- !u!1 &4543047113558293344
 GameObject:
   m_ObjectHideFlags: 0
@@ -5739,7 +5727,7 @@ GameObject:
   - component: {fileID: 740004025794719167}
   - component: {fileID: 8116507340807297082}
   m_Layer: 15
-  m_Name: ThrowSwordSpawnPosition
+  m_Name: ThrowSpawnPosition
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -5974,7 +5962,7 @@ GameObject:
   - component: {fileID: 7562293946606633305}
   m_Layer: 0
   m_Name: SfxAudio
-  m_TagString: SfxAudioSource
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
