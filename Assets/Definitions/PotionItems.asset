@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33841d13b7a4e009a9a72664a35768b, type: 3}
   m_Name: PotionItems
   m_EditorClassIdentifier: 
-  _items: []
+  _items:
+  - _id: HealthPotion
+    _tags: 00000000
+  - _id: BigHealthPotion
+    _tags: 00000000

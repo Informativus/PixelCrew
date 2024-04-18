@@ -48,20 +48,20 @@ namespace PixelCrew.Components.Health
             switch (potionId)
             {
                 case HealthId:
-                    TreatmetValue(go, playSoundsComponent, 3);
+                    TreatmetValue(go, playSoundsComponent, 3, potionId);
                     break;
                 case BigHealthId:
-                    TreatmetValue(go, playSoundsComponent, 6);
+                    TreatmetValue(go, playSoundsComponent, 6, potionId);
                     break;
             }
         }
 
-        private void TreatmetValue(GameObject go, PlaySoundsComponent playSoundsComponent, int healthDelta)
+        private void TreatmetValue(GameObject go, PlaySoundsComponent playSoundsComponent, int healthDelta, string potionId)
         {
             playSoundsComponent.Play("Treatment");
             _modifyHealth.SetHealthDelta(healthDelta);
             _modifyHealth.ApplyHealthDelta(go);
-            _session.Data.Inventory.Remove(BigHealthId, 1);
+            _session.Data.Inventory.Remove(potionId, 1);
         }
     }
 }

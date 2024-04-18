@@ -40,15 +40,17 @@ namespace PixelCrew.Creatures.Hero
         private bool _allowDoubleJump;
         private GameSession _session;
         
+        private string SelectedItemId => _session.IndentoryModel.SelectedItem?.Id;
+        
 
         private bool CanThrow
         {
             get
             {
-                if (_session.IndentoryModel.SelectedItem.Id == SwordId )
+                if (SelectedItemId == SwordId )
                     return SwordCount > 1;
 
-                var def = DefsFacade.I.Items.Get(_session.IndentoryModel.SelectedItem.Id);
+                var def = DefsFacade.I.Items.Get(SelectedItemId);
 
                 return def.HasTag(ItemTag.Throwable);
             }
