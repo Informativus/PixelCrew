@@ -18,14 +18,14 @@ namespace PixelCrew.UI.Hud.Inventory
         private void Start()
         {
             _session = FindObjectOfType<GameSession>();
-            _trash.Retain(_session.IndentoryModel.Subscribe(Rebuild));
+            _trash.Retain(_session.InventoryModel.Subscribe(Rebuild));
 
             Rebuild();
         }
 
         private void Rebuild()
         {
-            var _inventory = _session.IndentoryModel.Inventory;
+            var _inventory = _session.InventoryModel.Inventory;
 
             for (var i = _createdItem.Count; i < _inventory.Length; i++)
             {

@@ -9,7 +9,7 @@ namespace PixelCrew.Model
         [SerializeField] public PlayerData _data;
         public PlayerData Data => _data;
         
-        public HudIndentoryModel IndentoryModel { get; private set; }
+        public HudInventoryModel InventoryModel { get; private set; }
 
         private void Awake()
         {
@@ -27,7 +27,7 @@ namespace PixelCrew.Model
 
         private void InitModels()
         {
-            IndentoryModel = new HudIndentoryModel(Data);
+            InventoryModel = new HudInventoryModel(Data);
         }
 
         private void LoadHud()

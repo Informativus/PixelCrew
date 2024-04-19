@@ -22,7 +22,7 @@ namespace PixelCrew.Components.Health
         {
             get
             {
-                if (_session.IndentoryModel.SelectedItem.Id is HealthId or BigHealthId)
+                if (_session.InventoryModel.SelectedItem.Id is HealthId or BigHealthId)
                     return BigHealthCount > 0 || HealthCount > 0;
 
                 return false;
@@ -37,7 +37,7 @@ namespace PixelCrew.Components.Health
         public void ModifyHealth(GameObject go, PlaySoundsComponent playSoundsComponent)
         {
             if (!CanHeal) return;
-            var potionId = _session.IndentoryModel.SelectedItem.Id;
+            var potionId = _session.InventoryModel.SelectedItem.Id;
 
             if (_session.Data.Hp.Value == DefsFacade.I.Player.MaxHealth)
             {
@@ -48,15 +48,15 @@ namespace PixelCrew.Components.Health
             switch (potionId)
             {
                 case HealthId:
-                    TreatmetValue(go, playSoundsComponent, 3, potionId);
+                    TreatmentValue(go, playSoundsComponent, 3, potionId);
                     break;
                 case BigHealthId:
-                    TreatmetValue(go, playSoundsComponent, 6, potionId);
+                    TreatmentValue(go, playSoundsComponent, 6, potionId);
                     break;
             }
         }
 
-        private void TreatmetValue(GameObject go, PlaySoundsComponent playSoundsComponent, int healthDelta, string potionId)
+        private void TreatmentValue(GameObject go, PlaySoundsComponent playSoundsComponent, int healthDelta, string potionId)
         {
             playSoundsComponent.Play("Treatment");
             _modifyHealth.SetHealthDelta(healthDelta);

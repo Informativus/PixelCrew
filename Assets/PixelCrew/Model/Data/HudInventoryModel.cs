@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace PixelCrew.Model.Data
 {
-    public class HudIndentoryModel
+    public class HudInventoryModel
     {
         private readonly PlayerData _data;
         public InventoryItemData[] Inventory { get; private set; }
@@ -26,7 +26,7 @@ namespace PixelCrew.Model.Data
             
         }
 
-        public HudIndentoryModel(PlayerData data)
+        public HudInventoryModel(PlayerData data)
         {
             _data = data;
             
@@ -42,13 +42,11 @@ namespace PixelCrew.Model.Data
 
         private void OnChangedInventory(string id, int value)
         {
-            var indexFound = Array.FindIndex(Inventory, x => x.Id == id);
-            if (indexFound == -1)
-            {
-                Inventory = _data.Inventory.GetAll(ItemTag.Usable);
-                SelectedIndex.Value = Mathf.Clamp(SelectedIndex.Value, 0, Inventory.Length - 1);
-                OnChanged?.Invoke();
-            }
+            if (!DefsFacade.I.Items.Get(id).HasTag(ItemTag.Usable)) return;
+
+            Inventory = _data.Inventory.GetAll(ItemTag.Usable);
+            SelectedIndex.Value = Mathf.Clamp(SelectedIndex.Value, 0, Inventory.Length - 1);
+            OnChanged?.Invoke();
         }
 
         public void SetNextItem()

@@ -5135,11 +5135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _inventory:
-      _inventory:
-      - Id: Sword
-        Value: 3
-      - Id: Spike
-        Value: 3
+      _inventory: []
     Hp:
       _value: 20
 --- !u!4 &803009125

@@ -40,7 +40,7 @@ namespace PixelCrew.Creatures.Hero
         private bool _allowDoubleJump;
         private GameSession _session;
         
-        private string SelectedItemId => _session.IndentoryModel.SelectedItem?.Id;
+        private string SelectedItemId => _session.InventoryModel.SelectedItem?.Id;
         
 
         private bool CanThrow
@@ -87,7 +87,7 @@ namespace PixelCrew.Creatures.Hero
         {
             if (!CanThrow) return;
 
-            var throwableId = _session.IndentoryModel.SelectedItem.Id;
+            var throwableId = _session.InventoryModel.SelectedItem.Id;
             var throwableDef = DefsFacade.I.Throwable.Get(throwableId);
             Animator.SetTrigger(ThrowKey);
             Sounds.Play("Range");
@@ -197,7 +197,7 @@ namespace PixelCrew.Creatures.Hero
 
         public void NextItem()
         {
-            _session.IndentoryModel.SetNextItem();
+            _session.InventoryModel.SetNextItem();
         }
     }
 }
