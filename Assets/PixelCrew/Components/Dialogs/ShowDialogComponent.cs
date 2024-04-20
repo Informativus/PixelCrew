@@ -2,10 +2,7 @@ using System;
 using PixelCrew.Model.Data;
 using PixelCrew.Model.Definitions;
 using PixelCrew.UI.Hud.Dialogs;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Experimental.Rendering;
 
 namespace PixelCrew.Components.Dialogs
 {

@@ -15,38 +15,45 @@ namespace PixelCrew.Model.Data
 
         public OnInventoryChanged OnChanged;
 
-        public void Add(string id, int value)
+        public bool TryAdd(string id, int value)
         {
-            if (value <= 0) return;
+            if (value <= 0) return false;
 
             var itemDef = DefsFacade.I.Items.Get(id);
-            if (itemDef.IsVoid) return;
-
+            if (itemDef.IsVoid) return false;
+            bool isSuccess;
             if (itemDef.HasTag(ItemTag.Stackable))
             {
-                AddToStack(id, value);
+                isSuccess = AddToStack(id, value);
             }
             else
             {
+                isSuccess = true;
                 AddNonStack(id, value);
             }
 
-            OnChanged?.Invoke(id, Count(id));
+            if (isSuccess)
+            {
+                OnChanged?.Invoke(id, Count(id));
+            }
+
+            return isSuccess;
         }
 
-        private void AddToStack(string id, int value)
+        private bool AddToStack(string id, int value)
         {
             var isFull = _inventory.Count >= DefsFacade.I.Player.InventorySize;
             var item = GetItem(id);
             if (item == null)
             {
-                if (isFull) return;
+                if (isFull) return false;
 
                 item = new InventoryItemData(id);
                 _inventory.Add(item);
             }
 
             item.Value += value;
+            return true;
         }
 
         public InventoryItemData[] GetAll(params ItemTag[] tags)
@@ -55,8 +62,8 @@ namespace PixelCrew.Model.Data
             foreach (var item in _inventory)
             {
                 var itemDef = DefsFacade.I.Items.Get(item.Id);
-                var _isAllRequirementMet = tags.All(x => itemDef.HasTag(x));
-                if (_isAllRequirementMet) retValue.Add(item);
+                var isAllRequirementMet = tags.All(x => itemDef.HasTag(x));
+                if (isAllRequirementMet) retValue.Add(item);
             }
             
             return retValue.ToArray();

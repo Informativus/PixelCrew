@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using PixelCrew.Model;
 using PixelCrew.Model.Data;
@@ -7,23 +8,16 @@ namespace PixelCrew.Components.Collectables
 {
     public class CollectorComponent : MonoBehaviour, ICanAddInInventory
     {
-        [SerializeField] private List<InventoryItemData> _items = new List<InventoryItemData>();
+        private GameSession _session;
 
-        public void AddInInventory(string id, int value)
+        private void Awake()
         {
-            _items.Add(new InventoryItemData(id) {Value = value});
-            DropInInventory();
+            _session = FindObjectOfType<GameSession>();
         }
 
-        public void DropInInventory()
+        public bool AddInInventory(string id, int value)
         {
-            var session = FindObjectOfType<GameSession>();
-            foreach (var inventoryItemData in _items)
-            {
-                session.Data.Inventory.Add(inventoryItemData.Id, inventoryItemData.Value);
-            }
-
-            _items.Clear();
+            return _session.Data.Inventory.TryAdd(id, value);
         }
     }
 }
