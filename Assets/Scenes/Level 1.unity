@@ -5135,7 +5135,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _inventory:
-      _inventory: []
+      _inventory:
+      - Id: BigHealthPotion
+        Value: 1
     Hp:
       _value: 20
 --- !u!4 &803009125
