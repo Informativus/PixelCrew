@@ -1,5 +1,6 @@
 using UnityEngine;
 using PixelCrew.Model.Data;
+using PixelCrew.Utils.Disposable;
 using UnityEngine.SceneManagement;
 
 namespace PixelCrew.Model
@@ -8,7 +9,8 @@ namespace PixelCrew.Model
     {
         [SerializeField] public PlayerData _data;
         public PlayerData Data => _data;
-        
+
+        private readonly CompositeDisposable _trash = new CompositeDisposable();
         public HudInventoryModel InventoryModel { get; private set; }
 
         private void Awake()
@@ -28,6 +30,7 @@ namespace PixelCrew.Model
         private void InitModels()
         {
             InventoryModel = new HudInventoryModel(Data);
+            _trash.Retain(InventoryModel);
         }
 
         private void LoadHud()
@@ -44,6 +47,11 @@ namespace PixelCrew.Model
                     return true;
             }
             return false;
+        }
+
+        private void OnDestroy()
+        {
+            _trash.Dispose();
         }
     }
 

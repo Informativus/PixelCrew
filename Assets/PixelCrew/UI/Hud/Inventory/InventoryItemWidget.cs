@@ -24,7 +24,8 @@ namespace PixelCrew.UI.Hud.Inventory
         private void Start()
         {
             _session = FindObjectOfType<GameSession>();
-            _session.InventoryModel.SelectedIndex.SubscribeAndInvoke(OnIndexChanged);
+            var index = _session.InventoryModel.SelectedIndex;
+            _trash.Retain(index.SubscribeAndInvoke(OnIndexChanged));
         }
 
         private void OnIndexChanged(int newValue, int oldValue)
@@ -38,7 +39,11 @@ namespace PixelCrew.UI.Hud.Inventory
             var def = DefsFacade.I.Items.Get(item.Id);
             _icon.sprite = def.Icon;
             _value.text = def.HasTag(ItemTag.Stackable) ? item.Value.ToString() : string.Empty;
-            
+        }
+
+        private void OnDestroy()
+        {
+            _trash.Dispose();
         }
     }
 }

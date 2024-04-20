@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using PixelCrew.Model;
 using PixelCrew.Utils.Disposable;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace PixelCrew.UI.Hud.Inventory
@@ -25,24 +27,29 @@ namespace PixelCrew.UI.Hud.Inventory
 
         private void Rebuild()
         {
-            var _inventory = _session.InventoryModel.Inventory;
+            var inventory = _session.InventoryModel.Inventory;
 
-            for (var i = _createdItem.Count; i < _inventory.Length; i++)
+            for (var i = _createdItem.Count; i < inventory.Length; i++)
             {
                 var item = Instantiate(_item, _container);
                 _createdItem.Add(item);
             }
 
-            for (int i = 0; i < _inventory.Length; i++)
+            for (var i = 0; i < inventory.Length; i++)
             {
-                _createdItem[i].SetData(_inventory[i], i);
+                _createdItem[i].SetData(inventory[i], i);
                 _createdItem[i].gameObject.SetActive(true);
             }
 
-            for (int i = _inventory.Length; i < _createdItem.Count; i++)
+            for (var i = inventory.Length; i < _createdItem.Count; i++)
             {
                 _createdItem[i].gameObject.SetActive(false);
             }
+        }
+
+        private void OnDestroy()
+        {
+            _trash.Dispose();
         }
     }
 }
