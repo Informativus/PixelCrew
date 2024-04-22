@@ -8,9 +8,8 @@ namespace MyNamespace
 }
 public class PauseLevel : MonoBehaviour
 {
-    [SerializeField] private int _pauseState;
-    public void Pause()
+    public void Pause(int pauseState)
     {
-        Time.timeScale = _pauseState;
+        Time.timeScale = pauseState;
     }
 }

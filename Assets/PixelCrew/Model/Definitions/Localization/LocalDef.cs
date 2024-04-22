@@ -25,23 +25,35 @@ namespace PixelCrew.Model.Definitions.Localization
             _request.SendWebRequest().completed += OnDataLoaded;
         }
 
+        public Dictionary<string, string> GetData()
+        {
+            var data = new Dictionary<string, string>();
+
+            foreach (var item in _localeItems)
+            {
+                data.Add(item.Key, item.Value);
+            }
+
+            return data;
+        }
+
         private void OnDataLoaded(AsyncOperation operation)
         {
             if (operation.isDone)
             {
                 var json = _request.downloadHandler.text;
-                
+
                 var data = LocalizationHelper.FromJson(json);
                 AddInLocaleItem(data);
 
             }
         }
 
-
         private void AddInLocaleItem(Dictionary<string, string> data)
         {
             try
             {
+                _localeItems.Clear();
                 foreach (var pair in data)
                 {
                     var item = new LocaleItem

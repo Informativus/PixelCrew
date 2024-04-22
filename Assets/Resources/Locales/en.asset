@@ -15,7 +15,7 @@ MonoBehaviour:
   _url: http://95.163.228.198:8080/api-localization/english
   _localeItems:
   - Key: title_menu
-    Value: Menu
+    Value: Main menu
   - Key: title_option
     Value: Options
   - Key: title_shop
@@ -28,3 +28,9 @@ MonoBehaviour:
     Value: shop
   - Key: button_start
     Value: start
+  - Key: button_accept
+    Value: accept
+  - Key: title_music
+    Value: Music
+  - Key: title_sounds
+    Value: Sounds

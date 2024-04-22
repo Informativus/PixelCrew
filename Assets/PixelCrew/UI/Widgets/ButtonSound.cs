@@ -13,7 +13,7 @@ namespace PixelCrew.UI.Widgets
         public void OnPointerClick(PointerEventData eventData)
         {
             if (_source == null)    
-                _source = GameObject.FindWithTag("SfxAudioSource").GetComponent<AudioSource>();
+                _source = GameObject.Find("SfxAudioSource").GetComponent<AudioSource>();
             
             _source.PlayOneShot(_audioClip);
         }
