@@ -1,3 +1,4 @@
+using System;
 using PixelCrew.Model.Definitions.Localization;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,6 +31,11 @@ namespace PixelCrew.UI.Localizations
             var localized = LocalizationManager.I.Localize(_key);
             _text.text = _capitalize ? localized.ToUpper() : localized;
 
+        }
+
+        private void OnDestroy()
+        {
+            LocalizationManager.I.OnLocaleChanged -= OnLocaleChanged;
         }
     }
 }
