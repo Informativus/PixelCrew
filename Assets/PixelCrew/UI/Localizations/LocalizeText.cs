@@ -27,7 +27,7 @@ namespace PixelCrew.UI.Localizations
 
         private void Localize()
         {
-            var localized = LocalizationManager.I.Locolize(_key);
+            var localized = LocalizationManager.I.Localize(_key);
             _text.text = _capitalize ? localized.ToUpper() : localized;
 
         }

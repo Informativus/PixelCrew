@@ -26,8 +26,8 @@ namespace PixelCrew.UI.Windows.Settings
             _sfx.SetModel(GameSettings.I.Sfx);
 
             _dataGroup = new DataGroup<LocaleInfo, LocaleItemWidget>(_prefab, _container);
-
             _dataGroup.SetData(ComposeData());
+            
         }
 
         private List<LocaleInfo> ComposeData()
@@ -45,5 +45,6 @@ namespace PixelCrew.UI.Windows.Settings
         {
             LocalizationManager.I.SetLocale(selectedLocale);
         }
+        
     }
 }
