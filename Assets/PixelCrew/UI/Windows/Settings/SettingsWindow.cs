@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using PixelCrew.Model.Data;
 using PixelCrew.Model.Definitions.Localization;
 using PixelCrew.UI.Widgets;
+using UnityEditor.Profiling;
 using UnityEngine;
 
 namespace PixelCrew.UI.Windows.Settings
@@ -19,15 +20,17 @@ namespace PixelCrew.UI.Windows.Settings
 
         private readonly string[] _supportedLocales = { "en", "ru" };
 
+        private void Awake()
+        {
+            _dataGroup = new DataGroup<LocaleInfo, LocaleItemWidget>(_prefab, _container);
+            _dataGroup.SetData(ComposeData());
+        }
+
         protected override void OnEnable()
         {
             base.OnEnable();
             _music.SetModel(GameSettings.I.Music);
             _sfx.SetModel(GameSettings.I.Sfx);
-
-            _dataGroup = new DataGroup<LocaleInfo, LocaleItemWidget>(_prefab, _container);
-            _dataGroup.SetData(ComposeData());
-            
         }
 
         private List<LocaleInfo> ComposeData()

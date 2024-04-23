@@ -36,6 +36,8 @@ namespace PixelCrew.UI.Widgets
                 _createdItem[i].gameObject.SetActive(false);
             }
         }
+        
+        public void ClearData(){}
     }
 
     public interface IItemRenderer<in TDataType>
