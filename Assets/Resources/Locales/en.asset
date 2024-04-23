@@ -21,16 +21,18 @@ MonoBehaviour:
   - Key: title_shop
     Value: Shop
   - Key: button_exit
-    Value: exit
+    Value: Exit
   - Key: button_option
-    Value: options
+    Value: Options
   - Key: button_shop
-    Value: shop
+    Value: Shop
   - Key: button_start
-    Value: start
+    Value: Start
   - Key: button_accept
-    Value: accept
+    Value: Accept
   - Key: title_music
     Value: Music
   - Key: title_sounds
     Value: Sounds
+  - Key: title_language
+    Value: Language

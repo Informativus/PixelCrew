@@ -1,9 +1,7 @@
-using System;
 using System.Collections.Generic;
 using PixelCrew.Model.Data;
 using PixelCrew.Model.Definitions.Localization;
 using PixelCrew.UI.Widgets;
-using UnityEditor.Profiling;
 using UnityEngine;
 
 namespace PixelCrew.UI.Windows.Settings
