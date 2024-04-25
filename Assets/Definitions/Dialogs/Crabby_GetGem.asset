@@ -16,3 +16,4 @@ MonoBehaviour:
     _sentences:
     - Give me a green Gem
     - And I'll show you a movie...
+  _isLast: 0

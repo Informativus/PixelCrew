@@ -59,6 +59,7 @@ namespace PixelCrew.Creatures.Hero
         protected override void Awake()
         {
             base.Awake();
+            Time.timeScale = 1;
         }
 
         private void Start()

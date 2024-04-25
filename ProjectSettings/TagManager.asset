@@ -13,6 +13,7 @@ TagManager:
   - Ground
   - "\u0421orpse"
   - SfxAudioSource
+  - ShowDialog
   layers:
   - Default
   - TransparentFX

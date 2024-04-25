@@ -4239,7 +4239,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.98, y: -0.12, z: -10}
+  m_LocalPosition: {x: -0.836, y: -0.142, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4304,6 +4304,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6596073826729399576, guid: eb904070fabca2c46ada251cd692a03a, type: 3}
   m_PrefabInstance: {fileID: 1029914676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &549968672 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4265695663937911708, guid: aff627a5e9d7e4f42926d795cc30d02b, type: 3}
+  m_PrefabInstance: {fileID: 1745798673}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &569763036 stripped
 Transform:
@@ -4920,6 +4925,132 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &711797280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 711797281}
+  - component: {fileID: 711797283}
+  - component: {fileID: 711797282}
+  m_Layer: 13
+  m_Name: Dialogs
+  m_TagString: ShowDialog
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &711797281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711797280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1745798674}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &711797282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711797280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef62fbdd7ef35746b3bec91493693f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _required:
+  - Id: Green_Diamond
+    Value: 1
+  _removeAfterUse: 1
+  _onSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 711797283}
+        m_TargetAssemblyTypeName: PixelCrew.Components.Dialogs.ShowDialogComponent,
+          Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: e55a9fe0c602d40848886a99b2e9806e, type: 2}
+          m_ObjectArgumentAssemblyTypeName: PixelCrew.Model.Definitions.DialogDef,
+            Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  _onFail:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 711797283}
+        m_TargetAssemblyTypeName: PixelCrew.Components.Dialogs.ShowDialogComponent,
+          Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 5d6f2ecb7c30749e99310f044d1ec07d, type: 2}
+          m_ObjectArgumentAssemblyTypeName: PixelCrew.Model.Definitions.DialogDef,
+            Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &711797283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711797280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21be7b875d3a40bf9c2189d9be795a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mode: 1
+  _bound:
+    _sentences: []
+  _external: {fileID: 0}
+  _onCopmpleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 53769390}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: set_tag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Enemy
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 549968672}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &727893145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2256684896782500993, guid: be0acc0eb33bba94fb2f84d7414e9839, type: 3}
@@ -5425,11 +5556,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 21.784441, y: 0.032030344}
   m_EdgeRadius: 0
---- !u!1 &879218548 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4265695663937911708, guid: aff627a5e9d7e4f42926d795cc30d02b, type: 3}
-  m_PrefabInstance: {fileID: 1745798673}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &898044723 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1124067827079003870, guid: 68ac447ddcd7a664bb54550dc73155c2, type: 3}
@@ -7366,11 +7492,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4543047113393730586, guid: a45fe21128117ee42b93ad2c412e6b7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.98
+      value: -0.836
       objectReference: {fileID: 0}
     - target: {fileID: 4543047113393730586, guid: a45fe21128117ee42b93ad2c412e6b7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.12
+      value: -0.142
       objectReference: {fileID: 0}
     - target: {fileID: 4543047113393730586, guid: a45fe21128117ee42b93ad2c412e6b7d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8438,6 +8564,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4265695663937911711, guid: aff627a5e9d7e4f42926d795cc30d02b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5080232984716364013, guid: aff627a5e9d7e4f42926d795cc30d02b, type: 3}
       propertyPath: m_Layer
       value: 13
@@ -8473,22 +8603,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4265695663896181819, guid: aff627a5e9d7e4f42926d795cc30d02b, type: 3}
   m_PrefabInstance: {fileID: 1745798673}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1745798677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53769390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21be7b875d3a40bf9c2189d9be795a6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mode: 1
-  _bound:
-    _sentences: []
-  _external: {fileID: 0}
 --- !u!114 &1745798678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8504,7 +8618,7 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1745798679}
+      - m_Target: {fileID: 711797282}
         m_TargetAssemblyTypeName: PixelCrew.Components.Interactions.RequiereItemComponent,
           Assembly-CSharp
         m_MethodName: Check
@@ -8512,80 +8626,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1745798679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53769390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef62fbdd7ef35746b3bec91493693f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _required:
-  - Id: Green_Diamond
-    Value: 1
-  _removeAfterUse: 1
-  _onSuccess:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1745798677}
-        m_TargetAssemblyTypeName: PixelCrew.Components.Dialogs.ShowDialogComponent,
-          Assembly-CSharp
-        m_MethodName: Show
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: e55a9fe0c602d40848886a99b2e9806e, type: 2}
-          m_ObjectArgumentAssemblyTypeName: PixelCrew.Model.Definitions.DialogDef,
-            Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 53769390}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: set_tag
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Enemy
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 879218548}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  _onFail:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1745798677}
-        m_TargetAssemblyTypeName: PixelCrew.Components.Dialogs.ShowDialogComponent,
-          Assembly-CSharp
-        m_MethodName: Show
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 5d6f2ecb7c30749e99310f044d1ec07d, type: 2}
-          m_ObjectArgumentAssemblyTypeName: PixelCrew.Model.Definitions.DialogDef,
-            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9233,7 +9273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057236283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.98, y: -0.12, z: -10}
+  m_LocalPosition: {x: -0.836, y: -0.142, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

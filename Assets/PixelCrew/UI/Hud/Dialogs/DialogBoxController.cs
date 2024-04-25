@@ -3,6 +3,7 @@ using PixelCrew.Model.Data;
 using PixelCrew.Utils;
 using UnityEngine;
 using UnityEngine.UI;
+using PixelCrew.Components.Dialogs;
 
 namespace PixelCrew.UI.Hud.Dialogs
 {
@@ -20,6 +21,7 @@ namespace PixelCrew.UI.Hud.Dialogs
 
         private static readonly int IsOpen = Animator.StringToHash("IsOpen");
 
+        private ShowDialogComponent _dialogComponent;
         private DialogData _data;
         private int _currentSentence;
         private AudioSource _sfxSource;
@@ -28,6 +30,7 @@ namespace PixelCrew.UI.Hud.Dialogs
         private void Start()
         {
             _sfxSource = AudioUtils.FindSfxSource();
+            _dialogComponent = GameObject.FindWithTag("ShowDialog").GetComponent<ShowDialogComponent>();
         }
 
         public void ShowDialog(DialogData data)
@@ -90,6 +93,7 @@ namespace PixelCrew.UI.Hud.Dialogs
         {
             _animator.SetBool(IsOpen, false);
             _sfxSource.PlayOneShot(_close);
+            _dialogComponent.OnCompleted();
         }
 
         private void StopTypeAnimation()
