@@ -1,4 +1,5 @@
 using System.Collections;
+using Cinemachine;
 using PixelCrew.Model.Data;
 using PixelCrew.Utils;
 using UnityEngine;
@@ -82,6 +83,7 @@ namespace PixelCrew.UI.Hud.Dialogs
             if (isDialogComplete)
             {
                 HideDialogBox();
+                _dialogComponent.OnCompleted();
             }
             else
             {
@@ -93,7 +95,6 @@ namespace PixelCrew.UI.Hud.Dialogs
         {
             _animator.SetBool(IsOpen, false);
             _sfxSource.PlayOneShot(_close);
-            _dialogComponent.OnCompleted();
         }
 
         private void StopTypeAnimation()

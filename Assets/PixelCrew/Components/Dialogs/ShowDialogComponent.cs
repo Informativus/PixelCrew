@@ -14,13 +14,14 @@ namespace PixelCrew.Components.Dialogs
         [SerializeField] private DialogDef _external;
 
         [SerializeField] private UnityEvent _onCopmpleted;
-        
+
         private DialogBoxController _dialogBox;
+
         public void Show()
         {
             if (_dialogBox == null)
                 _dialogBox = FindObjectOfType<DialogBoxController>();
-            
+
             _dialogBox.ShowDialog(Data);
         }
 
@@ -32,22 +33,23 @@ namespace PixelCrew.Components.Dialogs
 
         public void OnCompleted()
         {
-            if(_external.IsLast)
-                _onCopmpleted?.Invoke();
+            if (_mode == Mode.External)
+            {
+                if (_external.IsLast)
+                    _onCopmpleted?.Invoke();
+            }
         }
-        public DialogData Data
+
+        private DialogData Data
         {
             get
             {
-                switch (_mode)
+                return _mode switch
                 {
-                    case Mode.Bound:
-                        return _bound;
-                    case Mode.External:
-                        return _external.Data;
-                    default:
-                        throw new ArgumentException();
-                }
+                    Mode.Bound => _bound,
+                    Mode.External => _external.Data,
+                    _ => throw new ArgumentException()
+                };
             }
         }
 
@@ -57,5 +59,4 @@ namespace PixelCrew.Components.Dialogs
             External
         }
     }
-    
 }

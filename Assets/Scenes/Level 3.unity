@@ -931,11 +931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0dc00e29a78cf443b1f6b6a12807134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &162434793 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6216156296555288895, guid: 38780186ae9eb8b4ab96a3ff97607b0e, type: 3}
-  m_PrefabInstance: {fileID: 1026413159}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &171266035
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,6 +3860,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6216156296555288880, guid: 38780186ae9eb8b4ab96a3ff97607b0e, type: 3}
+      propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1455868016}
+    - target: {fileID: 6216156296555288880, guid: 38780186ae9eb8b4ab96a3ff97607b0e, type: 3}
       propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1026413164}
@@ -3873,8 +3872,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6216156296555288880, guid: 38780186ae9eb8b4ab96a3ff97607b0e, type: 3}
+      propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Check
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216156296555288880, guid: 38780186ae9eb8b4ab96a3ff97607b0e, type: 3}
       propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216156296555288880, guid: 38780186ae9eb8b4ab96a3ff97607b0e, type: 3}
+      propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PixelCrew.Components.Interactions.RequiereItemComponent, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6216156296555288880, guid: 38780186ae9eb8b4ab96a3ff97607b0e, type: 3}
       propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -3999,7 +4006,7 @@ PrefabInstance:
     - target: {fileID: 8484984654009859208, guid: 38780186ae9eb8b4ab96a3ff97607b0e, type: 3}
       propertyPath: _onFail.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1026413165}
+      objectReference: {fileID: 0}
     - target: {fileID: 8484984654009859208, guid: 38780186ae9eb8b4ab96a3ff97607b0e, type: 3}
       propertyPath: _onSuccess.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
@@ -4032,7 +4039,8 @@ PrefabInstance:
       propertyPath: _onFail.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8484984654009859208, guid: 38780186ae9eb8b4ab96a3ff97607b0e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38780186ae9eb8b4ab96a3ff97607b0e, type: 3}
 --- !u!4 &1026413160 stripped
 Transform:
@@ -4044,24 +4052,17 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 7170038913648804054, guid: 38780186ae9eb8b4ab96a3ff97607b0e, type: 3}
   m_PrefabInstance: {fileID: 1026413159}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1026413165
+--- !u!114 &1026413165 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: -703559722683324608, guid: 38780186ae9eb8b4ab96a3ff97607b0e, type: 3}
+  m_PrefabInstance: {fileID: 1026413159}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162434793}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21be7b875d3a40bf9c2189d9be795a6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 39b8cddeaafa7254d938fa753719b18e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mode: 0
-  _bound:
-    _sentences:
-    - I need 1 key..
-    - And give me 5 coins, please
-  _external: {fileID: 0}
 --- !u!1001 &1031845359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5084,6 +5085,122 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf349e37b33b6ce4c809a74136bd57e1, type: 3}
+--- !u!1 &1455868013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1455868014}
+  - component: {fileID: 1455868016}
+  - component: {fileID: 1455868015}
+  m_Layer: 13
+  m_Name: Dialog
+  m_TagString: ShowDialog
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1455868014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455868013}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1026413160}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1455868015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455868013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21be7b875d3a40bf9c2189d9be795a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mode: 0
+  _bound:
+    _sentences:
+    - I need 1 key..
+    - And give me 5 coins, please
+    _isLast: 0
+  _external: {fileID: 0}
+  _onCopmpleted:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1455868016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455868013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef62fbdd7ef35746b3bec91493693f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _required:
+  - Id: Coin
+    Value: 5
+  - Id: Key
+    Value: 1
+  _removeAfterUse: 1
+  _onSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1026413165}
+        m_TargetAssemblyTypeName: PixelCrew.Animations.SpriteAnimation, Assembly-CSharp
+        m_MethodName: SetClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Open
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1026413164}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onFail:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1455868015}
+        m_TargetAssemblyTypeName: PixelCrew.Components.Dialogs.ShowDialogComponent,
+          Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1463708077 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2472648721580298833, guid: f7ce40c3da516ae43a1161cb6839fdd9, type: 3}
