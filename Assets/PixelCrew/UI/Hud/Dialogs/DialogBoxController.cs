@@ -31,7 +31,7 @@ namespace PixelCrew.UI.Hud.Dialogs
         private void Start()
         {
             _sfxSource = AudioUtils.FindSfxSource();
-            _dialogComponent = GameObject.FindWithTag("ShowDialog").GetComponent<ShowDialogComponent>();
+            _dialogComponent = GameObject.FindWithTag("ShowDialog")?.GetComponent<ShowDialogComponent>();
         }
 
         public void ShowDialog(DialogData data)
@@ -83,7 +83,7 @@ namespace PixelCrew.UI.Hud.Dialogs
             if (isDialogComplete)
             {
                 HideDialogBox();
-                _dialogComponent.OnCompleted();
+                _dialogComponent?.OnCompleted();
             }
             else
             {

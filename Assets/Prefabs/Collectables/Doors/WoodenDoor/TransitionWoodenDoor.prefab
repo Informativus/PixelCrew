@@ -1,5 +1,120 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1455868013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1455868014}
+  - component: {fileID: 1455868016}
+  - component: {fileID: 1455868015}
+  m_Layer: 13
+  m_Name: Dialog
+  m_TagString: ShowDialog
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1455868014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455868013}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6216156296555288882}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1455868016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455868013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef62fbdd7ef35746b3bec91493693f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _required:
+  - Id: Coin
+    Value: 5
+  - Id: Key
+    Value: 1
+  _removeAfterUse: 1
+  _onSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -703559722683324608}
+        m_TargetAssemblyTypeName: PixelCrew.Animations.SpriteAnimation, Assembly-CSharp
+        m_MethodName: SetClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Open
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7170038913648804054}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onFail:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1455868015}
+        m_TargetAssemblyTypeName: PixelCrew.Components.Dialogs.ShowDialogComponent,
+          Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1455868015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455868013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21be7b875d3a40bf9c2189d9be795a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mode: 0
+  _bound:
+    _sentences:
+    - I need 1 key..
+    - And give me 5 coins, please
+  _external: {fileID: 0}
+  _onCopmpleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6216156296555288895
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,10 +129,9 @@ GameObject:
   - component: {fileID: -703559722683324608}
   - component: {fileID: 6216156296555288880}
   - component: {fileID: 6216156296555288881}
-  - component: {fileID: 8484984654009859208}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: TransitionWoodenDoor
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,9 +145,10 @@ Transform:
   m_GameObject: {fileID: 6216156296555288895}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.57, y: -0.92, z: 0}
-  m_LocalScale: {x: 1.082, y: 1.1093, z: 1}
+  m_LocalScale: {x: 0.34421352, y: 0.33149227, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1455868014}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -102,7 +217,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.016733766, y: -0.23963189}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -113,7 +228,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1.1633184, y: 1.5207362}
   m_EdgeRadius: 0
 --- !u!114 &-703559722683324608
 MonoBehaviour:
@@ -179,8 +294,9 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8484984654009859208}
-        m_TargetAssemblyTypeName: RequiereItemComponent, Assembly-CSharp
+      - m_Target: {fileID: 1455868016}
+        m_TargetAssemblyTypeName: PixelCrew.Components.Interactions.RequiereItemComponent,
+          Assembly-CSharp
         m_MethodName: Check
         m_Mode: 1
         m_Arguments:
@@ -203,52 +319,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32799178a10924a4084687297e904f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: 
---- !u!114 &8484984654009859208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6216156296555288895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef62fbdd7ef35746b3bec91493693f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _required:
-  - Id: Key
-    Value: 1
-  - Id: Coin
-    Value: 5
-  _removeAfterUse: 0
-  _onSuccess:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7170038913648804054}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: -703559722683324608}
-        m_TargetAssemblyTypeName: PixelCrew.Animations.SpriteAnimation, Assembly-CSharp
-        m_MethodName: SetClip
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Open
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onFail:
-    m_PersistentCalls:
-      m_Calls: []
+  _sceneName: Level 2
